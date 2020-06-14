@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Dang ky </h2>
+    <hr>
+   <form action="#" id="formDK" name="formDK">
+       <input type="text" name="txtName" id="txtName" placeholder="Ten dang nhap" required><br>
+       <input type="password" name="txtPass" id="txtPass" placeholder="Mat khau"required><br>
+       <input type="number" name="txtNS" id="txtNS" placeholder="nhap nam sinh" required min="1900" max="2012"><br>
+       
+        <label for="">Gioi tinh</label>
+        <input type="checkbox" name="rdGender" id="rdMale" checked>Nam
+        
+        <input type="checkbox" name="rdGender" id="rdFemale">Nu <br><br>
+
+        <input type="email" name="txtMail" id="txtMail" placeholder="nhap email"><br><br>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+   </form>
+
+   <script>
+        //lap trinh cho su kien submit cua form nhap lieu
+        document.getElementById("formDK").onsubmit = function(){
+           // lay du lieu nhap trong o txtName
+           var ten=document.getElementById("txtName").value.trim();
+           // kiem tra chuoi nhap co chứa 3 đến 8 ky tu chữ or số ko?
+           //ig la để nhận chữ in hoa
+           // trong /^..$/ :2 cái ^ va $ là để nó run {3,8} độ dài 
+           var r =/^[a-z0-9]{3,8}$/ig; // bieu thuc quy tac cho luat tren
+
+           // kiem tra bt thuc quy tac r voi ten duoc nhap
+           if(r.test(ten)==false){
+                 alert("Ten dang nhap ko hop le !");
+                 return false;// khong load lai trang =>ko chuyen den trang web action
+           }
+           // lay du lieu nhap nhap trong o mat khau
+           var matkhau = document.getElementById("txtPass").value.trim();
+           // kiem tra mat khau co chua 5 ky so tro len hay ko?
+           r =/^\d{5,}$/; // bt qui tac cho luat mat khau
+
+           if(r.test(matkhau)==false){
+               alert("Mat khau ko hop le");
+               return false;
+           }
+           // lay du lieu nhap trong o nam sinh
+           var ns=document.getElementById("txtNS").value;
+           var tuoi =2019 - parseInt(ns);
+           // lay du lieu nhap trong o gioi tinh
+           var gt = document.getElementById("rdMale").checked?"nam":"nu";
+/*
+        switch(gt){
+            case'true': document.getElementById("rdMale").checked="nam"; break;
+            case'false': document.getElementById("rdMale").checked="nu"; break;
+
+        }
+*/            
+           var email=document.getElementById("txtMail").value;
+           var tongket="Tom tat thong tin ca nhan:\n";
+           tongket +=("ten:"+ ten +"\n");
+           tongket +=("tuoi:"+ tuoi +"\n");
+           tongket +=("gioi tinh:"+ gt +"\n");
+           tongket +=("email:"+email+"\n");
+
+           alert(tongket);
+
+           // cach luu tru thong tin ca nhan trong bien mang
+           var a=[];
+           a.push("==tom tat thong tin ca nhan==");
+           a.push("ten:"+ten);
+           a.push("tuoi:"+tuoi);
+           a.push("gioitinh:"+gt);
+
+           alert(a.join("\n"));
+           return false;
+    
+        }
+
+   </script>
+</body>
+</html>

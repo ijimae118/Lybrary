@@ -1,0 +1,99 @@
+xmlns="http://www.w3.org/1999/xhtml"
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+ width="450px" height="490cm"
+  <a href="http://">Home</a>
+          <a href="http://">Menu</a>
+          <a href="http://">Directions</a>
+          <a href="http://">Contact</a>
+ margin-left:76.4%;
+  margin:auto;
+
+  h1
+     
+
+
+     <aside class="sidebar">
+        <nav class="nav">
+          <ul>
+            <li class="active"><a href="#">Welcome</a></li>
+            <li><a href="as2_menu_list.html">Menu</a></li>
+            <li><a href="#">What We Do</a></li>
+            <li><a href="#">Get In Touch</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+
+
+
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HomePage</title>
+  <style>
+  
+    #main{
+      border:rgba(38, 15, 90, 0.835) solid thin;
+      border-width: 10px 25px;
+      
+    }
+    div{
+      border:rgb(14, 214, 91) solid thin;
+      
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    
+    .d1{
+      background-color: white;
+      color: black;
+      margin-right: 20%;
+      padding-left: 20px;
+      border: solid;
+      font-size: medium;
+      }
+
+     header{
+      background-repeat: no-repeat;
+      width: 100%; 
+
+     }
+
+  </style>
+<div id="main">
+<header style=" background-image:url(images/5.jpg);"> 
+  <h1>Lighthouse Island Bistro</h1>
+</header>
+
+<body >
+    <div class="d1">
+          <h3>Locally Roasted Free-Trade Coffee</h3>
+          <p>Indulge in the aroma of freshly ground roast coffee. Specialty drinks are available hot and cold</p>
+          <img src="images/BNGW ass2  (4).jpg" width="250px" alt="" srcset="" style="float: right;margin-left: 10px;padding-left: 10px;">
+          <h3>Specialty Pastries</h3>
+          
+          <p>Enjoy a selection of our fresh baked,organic pastries,including fresh fruit muffins , scones ,croissants, and cinnamon rolls </p>
+          <h3>Lunchtime is Anytime</h3>
+          <p>Savor delicious wraps and sandwiches on hearty, whole grain breads with locally grown salad, fruit, and vegetables</p>
+          <h3>Ponoramic View</h3>
+          <p>Take in some scenery! <br>
+            The top of our lighthuose offers a panoramic view of the countryside. Challenge your friends to climb our 100-stair tower.
+          </p>
+        </div>
+   
+    
+</body>
+<footer style="text-align: center; background-color: rgb(166, 198, 240);" >
+  <sub>Copyright &copy; 2016</sub>
+</footer>
+</div>
+</html>
+
+
+.tr{ position: relative;
+      background-image: url(images/Capture.png);
+      background-repeat:no-repeat;
+      background-position: center;
+      background-size: cover;}

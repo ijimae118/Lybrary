@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Product</title>
+  <!-- Custom css -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/slider.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/footer.css">
+
+  <!-- Font -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Fancybox -->
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+  <!-- Jquery UI -->
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+
+  <!--[if lt IE 9]>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/html5.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+<![endif]-->
+
+  <style>
+    /* fancy box css */
+
+    .fancybox-slide--iframe .fancybox-content {
+      width: 690px;
+      height: 600px;
+      max-width: 80%;
+      max-height: 80%;
+      margin: 0;
+    }
+
+    /* Filter button css */
+
+    #filter {
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+
+    #filter:hover {
+      background: black;
+      color: wheat;
+      font-weight: bold
+    }
+
+    #filter:focus {
+      background: black;
+      color: wheat;
+      font-weight: bold
+    }
+
+    /* Autocomplete css */
+
+    .ui-autocomplete-category {
+      font-weight: bold;
+      padding: .2em .4em;
+      margin: .8em 0 .2em;
+      line-height: 1.5;
+    }
+
+    /* Back to top css */
+
+    #return-to-top {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    #return-to-top i {
+      font-size: 1.8em;
+    }
+
+    #return-to-top:hover {
+      background-color: #555;
+    }
+  </style>
+
+  <body>
+    <!-- Back to top button -->
+    <a href="javascript:" id="return-to-top" title="Back to top">
+      <i class="fa fa-arrow-circle-up"></i>
+    </a>
+
+    <!-- Header -->
+    <header>
+      <div class="container-fluid">
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          <a href="Index.html">
+            <img src="images/logo auto.png" alt="" width="190" height="110">
+          </a>
+        </div>
+        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7" id="baner">
+          <img src="images/baner.gif" alt="baner" width="800" height="120">
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <p>590 CMT8 Street District 3
+            <br>Ho Chi Minh City
+            <span> (028) 3 846 0846</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Navigation Bar -->
+      <nav>
+        <ul class="menu">
+          <li>
+            <a href="Index.html" class="home">
+              <img src="images/home.jpg" alt="Home">
+            </a>
+          </li>
+          <li>
+            <a href="Product.html">Product</a>
+          </li>
+          <li>
+            <a href="Compare.html">Compare</a>
+          </li>
+          <li>
+            <a href="Finance Support.html">Finance Support</a>
+          </li>
+          <li>
+            <a href="Warranty Scheme.html">Warranty Scheme</a>
+          </li>
+          <li>
+            <a href="Contact Us.html">Contact Us</a>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <section id="content">
+      <div id="sub-page-left">
+
+        <!-- Filter -->
+        <div class="btn-group simplefilter" role="group" aria-label="...">
+          <h2>Filter by type:</h2>
+          <!-- data-filter is used to classify car and motor
+            1 for car and 2 for motor -->
+          <button type="button" id="filter" class="btn btn-default" data-filter="all" style="font-size: 1.3em">All products</button>
+          <button type="button" id="filter" class="btn btn-default" data-filter="1" style="font-size: 1.3em">Car Models</button>
+          <button type="button" id="filter" class="btn btn-default" data-filter="2" style="font-size: 1.3em">Motor Models</button>
+        </div>
+        <div class="btn-group simplefilter" role="group" aria-label="...">
+          <h2>Filter by price:</h2>
+          <!-- Modify value sortData for js file to sort by value of price 
+            data-sortAsc sort Ascending
+            data-sortDesc sort Descending
+            sortData sort by value
+            domIndex sort by index-->
+          <button type="button" id="filter" class="btn btn-default" style="font-size: 1.3em" data-sortAsc>Low to High</button>
+          <button type="button" id="filter" class="btn btn-default" style="font-size: 1.3em" data-sortDesc>High to Low</button>
+        </div>
+
+        <!-- Display -->
+        <div class="wrap ">
+          <!-- Add filter-container for displayed section
+            For each product add filtr-item for class, data-category for filter by type and data-sort for filter by price -->
+          <div class="row filtr-container">
+            <!--car 1-->
+            <div class="col-sm-6 col-md-4 filtr-item" data-category="1" data-sort="13660">
+              <div class="thumbnail">
+                <img src="../eproject/images/ford/fiesta/fiesta1.jpg" style="height: 135px" alt="Ford Fiesta">
+                <div class="caption">
+                  <h3>Ford Fiesta</h3>
+                  <p>Starting at $13,660
+                  </p>
+                  <p>
+                    <a data-fancybox data-type="iframe" data-src="html/Ford Fiesta.html" class="btn btn-danger" target="blank" role="button">Click for more details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--car 2-->
+            <div class="col-sm-6 col-md-4 filtr-item" data-category="1" data-sort="17860">
+              <div class="thumbnail">
+                <img src="../eproject/images/ford/focus/focus1.jpeg" style="height: 135px" alt="Focus">
+                <div class="caption">
+                  <h3>Ford Focus</h3>
+                  <p>Starting at $17,860</p>
+                  <p>
+                    <a data-fancybox data-type="iframe" data-src="html/Ford Focus.html" class="btn btn-danger" target="blank" role="button">Click for more details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--car 3-->
+            <div class="col-sm-6 col-md-4 filtr-item" data-category="1" data-sort="23570">
+              <div class="thumbnail">
+                <img src="../eproject/images/Honda/Accord/accord1.jpg" style="height: 135px" alt="Accord">
+                <div class="caption">
+                  <h3>Honda Accord</h3>
+                  <p>Starting at $23,570</p>
+                  <p>
+                    <a data-fancybox data-type="iframe" data-src="html/honda accord.html" class="btn btn-danger" target="blank" role="button">Click for more details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--car 4-->
+            <div class="col-sm-6 col-md-4 filtr-item" data-category="1" data-sort="18840">
+              <div class="thumbnail">
+                <img src="../eproject/images/Honda/Civic/civic1.jpg" style="height: 135px" alt="Honda Civic">
+                <div class="caption">
+                  <h3>Honda Civic</h3>
+                  <p>Starting at $18,840
+                  </p>
+                  <p>
+                    <a data-fancybox data-type="iframe" data-src="html/honda civic.html" class="btn btn-danger" target="blank" role="button">Click for more details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--car 5-->
+            <div class="col-sm-6 col-md-4 filtr-item" data-category="1" data-sort="24150">
+              <div class="thumbnail">
+                <img src="../eproject/images/Honda/CRV/crv1.jpg" style="height: 135px" alt="Honda CR-V">
+                <div class="caption">
+                  <h3>Honda CR-V</h3>
+                  <p>Starting at $24,150</p>
+                  <p>
+                    <a data-fancybox data-type="iframe" data-src="html/honda CR-V.html" class="btn btn-danger" target="blank" role="button">Click for more details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--car 6-->
+            <div class="col-sm-6 col-md-4 filtr-item" data-category="1" data-sort="22500">
+              <div class="thumbnail">
+                <img src="../eproject/images/kia/optima/optima1.png" style="height: 135px" alt="Kia Optima">
+                <div class="caption">
+                  <h3>Kia Optima</h3>
+                  <p>Starting at $22,500</p>
+                  <p>
+                    <a data-fancybox data-type="iframe" data-src="html/kia optima.html" class="btn btn-danger" target="blank" role="button">Click for more details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--car 7-->
+            <div class="col-sm-6 col-md-4 filtr-item" data-category="1" data-sort="13900">
+              <div class="thumbnail">
+                <img src="../eproject/images/kia/rio/rio2.jpg" style="height: 135px" alt="Kia Rio">
+                <div class="caption">
+                  <h3>Kia Rio</h3>
+                  <p>Starting at $13,900
+                  </p>
+                  <p>
+                    <a data-fancybox data-type="iframe" data-src="html/kia Rio.html" class="btn btn-danger" target="blank" role="button">Click for more details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--car 8-->
+            <div class="col-sm-6 col-md-4 filtr-item" data-category="1" data-sort="25800">
+              <div class="thumbnail">
+                <img src="../eproject/images/kia/sorento/sorento1.jpg" style="height: 135px" alt="Kia Sorento">
+                <div class="caption">
+                  <h3>Kia Sorento</h3>
+                  <p>Starting at $25,800</p>
+                  <p>
+                    <a data-fancybox data-type="iframe" data-src="html/kia sorento.html" class="btn btn-danger" target="blank" role="button">Click for more details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--car 9-->
+            <div class="col-sm-6 col-md-4 filtr-item" data-category="1" data-sort="19060">
+              <div class="thumbnail">
+                <img src="../eproject/images/toyota/yaris/yaris2.jpg" style="height: 135px" alt="Toyota Yaris">
+                <div class="caption">
+                  <h3>Toyota Yaris</h3>
+                  <p>Starting at $19,060</p>
+                  <p>
+                    <a data-fancybox data-type="iframe" data-src="html/Toyota yaris.html" class="btn btn-danger" target="blank" role="button">Click for more details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--car 10-->
+            <div class="col-sm-6 col-md-4 filtr-item" data-category="1" data-sort="35345">
+              <div class="thumbnail">
+                <img src="../eproject/images/toyota/camry/camry2.jpg" style="height: 135px" alt="Toyota Camry">
+                <div class="caption">
+                  <h3>Toyota Camry</h3>
+                  <p>Starting at $35,345
+                  </p>
+                  <p>
+                    <a data-fancybox data-type="iframe" data-src="html/Toyota Camry.html" class="btn btn-danger" target="blank" role="button">Click for more details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--Motobike 1-->
+            <div class="col-sm-6 col-md-4 filtr-item" data-category="2" data-sort="8399">
+              <div class="thumbnail">
+                <img src="../eproject/images/yamaha/bolt/bolt4.png" style="height: 135px" alt="Yamaha BOLT">
+                <div class="caption">
+                  <h3>Yamaha BOLT</h3>
+                  <p>Starting at $8,399
+                  </p>
+                  <p>
+                    <a data-fancybox data-type="iframe" data-src="html/Yamaha BOLT.html" class="btn btn-danger" target="blank" role="button">Click for more details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--Motobike 2-->
+            <div class="col-sm-6 col-md-4 filtr-item" data-category="2" data-sort="12999">
+              <div class="thumbnail">
+                <img src="../eproject/images/yamaha/mt-10/mt10_1.png" style="height: 135px" alt="Yamaha MT-10">
+                <div class="caption">
+                  <h3>Yamaha MT-10</h3>
+                  <p>Starting at $12,999</p>
+                  <p>
+                    <a data-fancybox data-type="iframe" data-src="html/Yamaha MT-10.html" class="btn btn-danger" target="blank" role="button">Click for more details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--Motobike 3-->
+            <div class="col-sm-6 col-md-4 filtr-item" data-category="2" data-sort="12199">
+              <div class="thumbnail">
+                <img src="../eproject/images/yamaha/r6/r6-1.jpg" style="height: 135px" alt="Yamaha R6">
+                <div class="caption">
+                  <h3>Yamaha R6</h3>
+                  <p>Starting at $12,199</p>
+                  <p>
+                    <a data-fancybox data-type="iframe" data-src="html/Yamaha R6.html" class="btn btn-danger" target="blank" role="button">Click for more details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--Motobike 4-->
+            <div class="col-sm-6 col-md-4 filtr-item" data-category="2" data-sort="28000">
+              <div class="thumbnail">
+                <img src="../eproject/images/kawasaki/ninja/ninja1.jpg" style="height: 135px" alt="Kawasaki Ninja">
+                <div class="caption">
+                  <h3>Kawasaki Ninja</h3>
+                  <p>Starting at $28,000</p>
+                  <p>
+                    <a data-fancybox data-type="iframe" data-src="html/kawasaki ninja.html" class="btn btn-danger" target="blank" role="button">Click for more details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--Motobike 5-->
+            <div class="col-sm-6 col-md-4 filtr-item" data-category="2" data-sort="11999">
+              <div class="thumbnail">
+                <img src="../eproject/images/kawasaki/z/z1000-1.jpg" style="height: 135px" alt="Kawasaki Z-1000">
+                <div class="caption">
+                  <h3>Kawasaki Z</h3>
+                  <p>Starting at $11,999</p>
+                  <p>
+                    <a data-fancybox data-type="iframe" data-src="html/kawasaki z1000.html" class="btn btn-danger" target="blank" role="button">Click for more details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--Motobike 6-->
+            <div class="col-sm-6 col-md-4 filtr-item" data-category="2" data-sort="12999">
+              <div class="thumbnail">
+                <img src="../eproject/images/kawasaki/versys/versys1.jpg" style="height: 135px" alt="Kawasaki Versys">
+                <div class="caption">
+                  <h3>Kawasaki V</h3>
+                  <p>Starting at $12,999</p>
+                  <p>
+                    <a data-fancybox data-type="iframe" data-src="html/kawasaki versys.html" class="btn btn-danger" target="blank" role="button">Click for more details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search section -->
+      <div id="sub-page-right" style="position: relative">
+        <h2 class="p2">SEARCH</h2>
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="glyphicon glyphicon-search"></i>
+          </span>
+          <input type="text" class="form-control filtr-search" name="filtr-search" id="search" data-search placeholder="Type car/motor model you're looking for"
+            style="width: 280px">
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <h2 style="color: #ffffff">
+          <b>
+            <span style="color: blue">SPONSORED BY</span>
+          </b>
+        </h2>
+        <div class="container" id="logo-footer">
+          <a href="https://automobiles.honda.com/" target="blank">
+            <img src="images/honda.png" alt="honda" width="75" height="65">
+          </a>
+          <a href="https://www.toyota.com/" target="blank">
+            <img src="images/toyota.png" alt="toyota" width="75" height="65">
+          </a>
+          <a href="https://www.ford.com/" target="blank">
+            <img src="images/ford.png" alt="ford" width="75" height="65">
+          </a>
+          <a href="http://www.yamaha-motor.com/" target="blank">
+            <img src="images/yamaha.png" alt="yamaha" width="75" height="65">
+          </a>
+          <a href="https://www.kia.com/us/en/home" target="blank">
+            <img src="images/kia.png" alt="kia" width="75" height="65">
+          </a>
+        </div>
+        <p class="footer-links">
+          <a href="Index.html">Home</a> -
+          <a href="Product.html">Product</a> -
+          <a href="Compare.html">Compare</a>
+          <br>
+          <a href="Finance Support.html">Finance Support</a> -
+          <a href="Warranty Scheme.html">Warranty Scheme</a> -
+          <a href="Contact Us.html">Contact Us</a>
+        </p>
+        <p class="footer-company-name">Autoworld &copy; 2017 </p>
+      </div>
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p>
+            <span>590 CMT8 Street District 3</span> Ho Chi Minh, Viet Nam</p>
+        </div>
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>(028) 3 846 0846</p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p>
+            <a href="mailto:autoworld@gmail.com">Autoworld@gmail.com</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-icons">
+          <caption>FOLLOW US</caption>
+          <br>
+          <a href="https://www.facebook.com/" class="fa fa-facebook" target="blank"></a>
+          <a href="https://twitter.com/?lang=en" class="fa fa-twitter" target="blank"></a>
+          <a href="https://plus.google.com/discover?hl=en" class="fa fa-google" target="blank"></a>
+          <a href="https://www.linkedin.com/" class="fa fa-linkedin" target="blank"></a>
+          <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram" target="blank"></a>
+        </div>
+    </footer>
+
+    <!-- script -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.filterizr.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- function -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+
+        // Fancybox function
+        $('[data-fancybox]').fancybox({
+          toolbar: false,
+          smallBtn: true,
+          iframe: {
+            preload: false
+          }
+        });
+
+        // Filter function
+        $('.filtr-container').filterizr();
+
+        // Autocomplete function
+        $.widget("custom.catcomplete", $.ui.autocomplete, {
+          _create: function () {
+            this._super();
+            this.widget().menu("option", "items", "> :not(.ui-autocomplete-category)");
+          },
+          _renderMenu: function (ul, items) {
+            var that = this,
+              currentCategory = "";
+            $.each(items, function (index, item) {
+              var li;
+              if (item.category != currentCategory) {
+                ul.append("<li class='ui-autocomplete-category'>" + item.category + "</li>");
+                currentCategory = item.category;
+              }
+              li = that._renderItemData(ul, item);
+              if (item.category) {
+                li.attr("aria-label", item.category + " : " + item.label);
+              }
+            });
+          }
+        });
+        var data = [
+          { label: "Ford Fiesta", category: "Ford" },
+          { label: "Ford Focus", category: "Ford" },
+          { label: "Honda Accord", category: "Honda" },
+          { label: "Honda Civic", category: "Honda" },
+          { label: "Honda CR-V", category: "Honda" },
+          { label: "Kia Optima", category: "Kia" },
+          { label: "Kia Rio", category: "Kia" },
+          { label: "Kia Sorento", category: "Kia" },
+          { label: "Toyota Yaris", category: "Toyota" },
+          { label: "Toyota Camry", category: "Toyota" },
+          { label: "Yamaha BOLT", category: "Yamaha" },
+          { label: "Yamaha MT-10", category: "Yamaha" },
+          { label: "Yamaha R6", category: "Yamaha" },
+          { label: "Kawasaki Ninja", category: "Kawasaki" },
+          { label: "Kawasaki Z", category: "Kawasaki" },
+          { label: "Kawasaki V", category: "Kawasaki" },
+        ];
+        $("#search").catcomplete({
+          delay: 0,
+          source: data
+        });
+
+        // ===== Scroll to Top Function ==== 
+        $(window).scroll(function () {
+          if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+            $('#return-to-top').fadeIn(200);    // Fade in the arrow
+          } else {
+            $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+          }
+        });
+        $('#return-to-top').click(function () {      // When arrow is clicked
+          $('body,html').animate({
+            scrollTop: 0                       // Scroll to top of body
+          }, 500);
+        });
+      });
+    </script>
+  </body>
+
+</html>

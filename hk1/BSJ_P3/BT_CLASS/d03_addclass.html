@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .coll{
+            background-color: beige;
+            width: 300px;
+            height: 150px;
+        }
+    </style>
+  
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+<body>
+    <div class="container">
+        <h1>JQuery</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur tempora eaque ut, facere accusantium neque quibusdam, sed labore nam id eos enim reiciendis possimus unde doloremque voluptatum aperiam sint recusandae?</p>
+        <input type="button" value="change" id="id-button" >
+        <script>
+                $("#id-button").click(function(){
+                    $("p").addClass("coll");
+                });
+        </script>
+
+    </div>
+</body>
+</html>

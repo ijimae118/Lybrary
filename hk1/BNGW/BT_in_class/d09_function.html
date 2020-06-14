@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Function</title>
+</head>
+<body>
+<div>
+    <h2>Function</h2>
+    <hr>
+   <form action="" method="get" id="formHD" name="formHD">
+       <h3>Hoa don mua hang sang pham</h3>
+       <label for="">San pham</label>
+       <select id="cbSP" name="cbSP">
+              <option value="10">Coca cola</option>
+              <option value="15">Chocolate</option>
+              <option value="30">Cake</option>
+              <option value="8">7up</option>
+              <option value="9">Snack</option>
+       </select> <br><br>
+       <label for="">Don gia:</label>
+       <input type="text" name="txtDG" id="txtDG" readonly >
+       <br><br>
+       <label for="">so luong:</label>
+       <input type="number" name="txtSL" id="txtSL" value="1" min="1" max="200" required>
+       <br><br>
+       <label for="">Thanh tien</label>
+       <input type="text" name="txtTT" id="txtTT" readonly>
+       <br><br>
+       <input type="submit" value="Submit">
+       <input type="reset" value="Reset">
+
+   </form>
+</div>
+<script>
+    // viet ham tinh tien cho hoa don
+    function TinhTien(){
+        // lay don gia cua san pham
+        var dg = document.getElementById("txtDG").value;
+        // lay so luong dat mua
+        var sl= document.getElementById("txtSL").value;
+        dg=parseInt(dg);
+        sl=parseInt(sl);
+        var tt=dg*sl
+        document.getElementById("txtTT").value=tt;
+    }
+       // lap trinh cho su kien bam nut submit cua form hoa don
+        document.getElementById("formHD").onsubmit = function(){
+            // goi ham tinh tien
+            TinhTien();
+            return false;
+        }
+       // cai nay ko can lam( coi de hieu)
+       // lap trinh cho su kien onselect tren combobox sanpham
+       // document.getElementById("cbSP").onfocus = function(){
+       //     var dg=document.getElementById("cbSP").value;
+       //     document.getElementById("txtDG").value=dg;
+       //}
+    
+/*        // lap trinh cho su kien onchange tren form HD ; sự kiện thay đổi ......
+        document.getElementById("formHD").onchange = function(){
+            var dg=document.getElementById("cbSP").value;
+            document.getElementById("txtDG").value=dg;
+            TinhTien();
+            // khi dg thay doi ,thi' tinh tien cho no  tinh lai luon ...if ko thi phai nhan button nữa
+        }
+
+        // lap trinh cho su kien load xong trang web; sự kiện khi window load lại
+        window.onload = function(){
+            var dg=document.getElementById("cbSP").value;
+            document.getElementById("txtDG").value=dg;
+            TinhTien();
+        }
+*/        
+        // ham lay gia tri don gia san pham
+        document.getElementById("formHD").onchange =layDonGia;
+        window.onload = layDonGia;
+
+        function layDonGia(){
+            var dg=document.getElementById("cbSP").value;
+            document.getElementById("txtDG").value=dg;
+            TinhTien();
+        }
+    
+</script>
+</body>
+</html>

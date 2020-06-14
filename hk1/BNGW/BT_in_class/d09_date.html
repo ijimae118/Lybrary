@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Date Demo</h2>
+    <hr>
+    <form action="" method="GET" id="formDK" name="formDK">
+    <label for="">Nhap email</label>
+    <input type="email" name="txtMail" id="txtMail" required value="phong@hotmail.com">
+    <br><br>
+    <label for="">Nhap mat khau</label>
+    <input type="password" name="txtPass" id="txtPass" required value="123456">
+    <br><br>
+    <label for="">Nhap ngay sinh</label>
+    <input type="date" name="txtNS" id="txtNS" required value="2001-11-24">
+    <br><br>
+     <input type="submit" value="Submit">
+     <input type="reset" value="Reset">
+     <input type="button" value="btOK" id="btOK" name="btOK">
+
+     <h3>Thong tin tom tat</h3>
+     <textarea name="txtTT" id="txtTT" cols="30" rows="10" readonly>...</textarea>
+     
+    </form>
+    <script>
+    // lap trinh cho su kien submit cua form dang ky
+    document.getElementById("formDK").onsubmit=function(){
+        // lap ngay sinh
+        var ns=document.getElementById("txtNS").value;
+        // tao 1 doi tuong date chua ngay thang nam sinh cua user
+        var dateNS=new Date(ns);
+        // lay nam sinh
+        var namsinh=dateNS.getFullYear();
+        alert(namsinh);
+        // tao 1 doi tuong date chua ngay gio hien tai cua ht may tinh
+        var today = new Date();
+        // lay nam hien tai
+        var namnay=today.getFullYear();
+        // tinh tuoi
+        var tuoi=namnay-namsinh;
+        if(tuoi<18){
+            alert("Em chua 18 tuoi nha , ve nha di e!!!");
+            return false;
+        }
+        var mail= document.getElementById("txtMail").value;
+        var password=document.getElementById("txtPass").value;
+        var a=[];
+        a.push("Email:"+mail);
+        a.push("Password:"+password);
+        a.push("Tuoi:"+tuoi);
+        // 1.xuat thong tin tom tat vo o text area(o nhap nhieu dong)
+        document.getElementById("txtTT").value=a.join("\n");
+        // 2.xuat thong tin tom tat ra hop thoai thong bao
+        alert(a.join("\n"));
+       
+        // 3.xuat tt tom tat ra 1 cua so trinh duyet moi
+        var newTap=window.open();
+        newTap.document.write(a.join("<br>"));
+        
+        return false;
+    }  
+    // dung de mo 1 file html khac
+    document.getElementById("btOK").onclick=function(){
+        location.assign("d09_function.html");
+    } 
+    </script>
+</body>
+</html>

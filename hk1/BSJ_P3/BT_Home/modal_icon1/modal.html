@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="https://kit.fontawesome.com/11144dca42.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="modal.css">
+<script src="modal.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+
+<h2>Modal Login Form</h2>
+<!--Button-->
+<i class="fas fa-comment fa-lg"  onclick="document.getElementById('id01').style.display='block'" style="width:auto;"></i>
+<!--form-->
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="#" method="post" id="form" name="form">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="Capture5.PNG" alt="avatar" class="avatar">
+      <h1>~~~~~Writte Us~~~~~</h1>
+    </div>
+    <div class="container">
+       
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name.." required><br>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Email" required title="123@gmail.com" pattern="^[a-zA-Z0-9]{3,}@[a-zA-Z0-9]{2,5}\.[a-zA-Z0-9]{2,4}$"><br>
+
+            <label for="tel">Telephone:</label>
+            <input type="tel" name="tel" id="tel" placeholder="Telephone" required title="113" pattern="^[0-9]{3,12}$"><br>
+        
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." title="text" style="height:200px"></textarea><br>
+         
+            <label for="country">Event type:</label>
+            <h4>What kind of event?</h4>
+            <select id="event" name="event" required>
+              <option value="" style="display:none;">Event</option>
+              <option value="Wedding">Wedding</option>
+              <option value="Celebrations">Celebrations</option>
+              <option value="Corporate">Corporate Events</option>
+              <option value="School Fundraising & Event Planning">School Fundraising & Event Planning</option>
+              <option value="Other">Other</option>
+            </select><br>
+            <label for="date">Event Date:</label>
+            <input type="date" name="date" id="date" required title="The month of the event must be greater than or equal to 3 months from the current month"><br>
+            <input type="submit" value="Submit"><br><br>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Contact &emsp;<a href="https://globfone.com/call-phone/"><i style="font-size: xx-large;" class="fa fa-phone-volume"></i></a></span>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

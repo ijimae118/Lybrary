@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+ section{
+     /* dung 3 cai duoi canh khung hinh giua*/
+     width: 50%;
+     margin: auto;
+     border: black solid;
+     /*dung text align canh giua*/
+     text-align: center;
+     
+ }
+ label{
+     display: inline-block;
+     border: orange solid;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-size:large;
+     font-weight: bolder;
+     width:29% ;
+     margin: auto;    
+     line-height: 27px;
+    
+    
+ }
+ input[type="text"],
+ input[type="date"],
+ input[type="tel"],
+ input[type="number"],
+ input[type="range"],
+ input[type="email"],
+ select,textarea{
+     width: 25%;
+     margin: auto;
+     line-height: 25px;
+    
+ }
+</style>
+<body>
+    <header style="text-align: center;font-size: xx-large;">
+          <h1>oh la la</h1>
+    </header>
+    
+    <section>
+        <h1 style="text-align: center;">oh la la</h1>
+        <form action="" id="" name="">
+         <label for="">Name</label>
+         <input type="text" name="" id="" value=""><br>
+         <label for="">Date</label>
+         <input type="date" name="" id="" value=""><br>
+         <label for="">Telephone</label>
+         <input type="tel" name="" id="" value=""><br>
+         <!--Number chỉ nhận số ko nhận chữ-->
+        <label for="">Number</label>
+        <input type="number" name="" id="" value=""><br>
+        <label for="">Range</label>
+        <input type="range" name="" id="" min="" max="" value=""><br>
+        <label for="">Gender</label>
+       <input type="radio" name="1" id="" checked>Nam
+       <input type="radio" name="1" id="" >Nu <br>
+       <label for="">Hobbies</label>
+       <input type="checkbox" name="" id="" value="sport" checked>sport
+       <input type="checkbox" name="" id="" value="swimming">swimming
+       <input type="checkbox" name="" id="" value="play">play <br>
+       <label for="">Email</label>
+       <input type="email" name="" id=""><br>
+       <label for="">City</label>
+       <select name="" id="">
+               <option value="" style="display:none;">--select--</option>
+           <optgroup label="Menu">
+               <option value="1">1</option>
+               <option value="2">2</option>
+           </optgroup>
+       </select><br>
+       <label for="">TEXT AREA</label>
+       <textarea name="" id="" cols="20" rows="5"></textarea><br><br>
+
+    <p style="text-align: center;"> 
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </p> 
+        </form>
+    </section>
+
+</body>
+</html>

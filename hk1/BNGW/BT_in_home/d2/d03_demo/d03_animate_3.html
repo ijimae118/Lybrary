@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Animation Demo</title>
+<style>
+div{
+	width:100px;
+	height:100px;
+	background-color:red;
+	border-radius:50px;
+	
+	position:fixed;
+	
+	animation-name:ani;
+	animation-delay:1s;
+	animation-duration:5s;
+	animation-iteration-count:infinite;
+	animation-timing-function:linear;
+	animation-direction:normal;
+	
+	animation-play-state:running;
+	
+	/*ap dung hieu ung cho Safari, Chrome*/
+	-webkit-animation-name:ani;
+	-webkit-animation-delay:1s;
+	-webkit-animation-duration:5s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-direction:normal;
+	
+	-webkit-animation-play-state:running;
+
+	/*ap dung hieu ung cho FireFox*/
+	-moz-animation-name:ani;
+	-moz-animation-delay:1s;
+	-moz-animation-duration:5s;
+	-moz-animation-iteration-count:infinite;
+	-moz-animation-timing-function:linear;
+	-moz-animation-direction:alternate;
+	
+	-moz-animation-play-state:running;
+}
+
+
+/*dinh nghia tap keyframe cho ani*/
+@keyframes ani{
+	0%{background-color:red; left:0px; top:0px;}
+	25%{background-color:yellow; left:200px; top:0px;}
+	50%{background-color:blue; left:200px; top:200px;}
+	75%{background-color:green; left:0px;top:200px;}
+	100%{background-color:red; left:0px; top:0px;}
+}
+/*Safari , Chrome*/
+@-webkit-keyframes ani{
+	0%{background-color:red; left:0px; top:0px;}
+	25%{background-color:yellow; left:200px; top:0px;}
+	50%{background-color:blue; left:200px; top:200px;}
+	75%{background-color:green; left:0px;top:200px;}
+	100%{background-color:red; left:0px; top:0px;}
+}
+
+/*Firefox*/
+@-moz-keyframes ani{
+	0%{background-color:red; left:0px; top:0px;}
+	25%{background-color:yellow; left:200px; top:0px;}
+	50%{background-color:blue; left:200px; top:200px;}
+	75%{background-color:green; left:0px;top:200px;}
+	100%{background-color:red; left:0px; top:0px;}
+}
+
+</style>
+
+</head>
+
+<body>
+<h2>Animation demo ...</h2>
+<div></div>
+</body>
+</html>

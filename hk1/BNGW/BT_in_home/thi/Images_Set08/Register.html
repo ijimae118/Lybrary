@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>set08</title>
+    <style>
+        h1{
+            text-align: center;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        nav{
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 0px 50px 0px 0px;
+        }
+        a{
+            font-size: x-large;
+            padding: 0px 20px 0px 0px;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+        footer{
+            text-align: center;
+            font-weight: bolder;
+            font-size: larger;
+            border-top: black solid;
+        }
+        #b1{
+            display: inline-block;
+        }
+        #b2{
+            display: inline-block;
+            float: right;
+            border:steelblue solid;
+        }
+        label{
+            display: inline-block;
+            width: 200px;
+        }
+        section{
+            width: 40%;
+            margin: auto;
+            border: gray solid;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body style="border: black solid;">
+    <div style="border-bottom: black solid;">
+    <header>
+        <h1>AP BookStore</h1>
+    </header>
+    <nav>
+        <a href="homepage.html">BOOKS</a>
+        <a href="">BEST SELLERS</a>
+        <a href="">GENRES</a>
+        <a href="">REGISTER</a>
+        <a href="">SIGN IN</a>
+        <a href="">YOUR ORDERS</a>
+        <a href="">YOUR CART</a>
+    </nav>
+    </div><br>
+    <section>
+        <h1>Great A New Account (It's Easy!)</h1>
+        <form action="" id="form" name="form">
+            <label for="">Your Frist Name</label>
+            <input type="text" name="txtN" id="txtN"><br>
+            <label for="">Your Email</label>
+            <input type="email" name="txtE" id="txtE" pattern="^[a-zA-Z0-9]{4,}@[a-zA-Z0-9]{3,5}\.[a-zA-Z0-9]{2,5}$"><br>
+            <label for="">Confirm your E-Mail</label>
+            <input type="email" name="txtC" id="txtC"><br>
+            <h3>Privacy Policy:We do not share your email address</h3><br>
+            <label for="">Select A Password</label>
+            <input type="password" name="P" id="P" pattern="^\[a-zA-Z0-9]{5,15}$"><br>
+            <h3>Passwords must contain between five and 15 characters,and cannot contain spaces or non-English characters.</h3><br>
+            <label for="">Re-Enter Password</label>
+            <input type="password" name="R" id="R"><br><br>
+            <input type="checkbox" name="txtCB" id="txtCB">Yes,Sign Me Up For Cash-Saving Coupons <br><br>
+            
+            <input type="button" value="Create Account">
+        </form>
+    </section><br>
+    
+</body>
+<script>
+    document.getElementById("form").onsubmit=function(){
+          alert("your account has been creates successfully");
+          return false;
+    }
+</script>
+</html>

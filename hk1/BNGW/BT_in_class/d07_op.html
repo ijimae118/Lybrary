@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>operators</title>
+</head>
+<body>
+    <h2>Operartors demo</h2>
+    <hr>
+    <input type="button" value="Click" id="btOK" name="btOK">
+    <p id="kq">...</p>
+</body>
+<script>
+    // lap trinh cho su kien click tren button OK
+    document.getElementById("btOK").onclick=function(){
+        var x1=123;    // so nguyen INS
+        var x2="123";  // Chuoi ky tu
+
+        if(x1===x2){
+            document.getElementById("kq").innerHTML = "<b>x1[=123] bang x2['123']</b> !";
+        }else{
+            document.getElementById("kq").innerHTML = "<b>x1[=123] ko bang x2['123']</b> !";
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>All-Services</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="css/tab.css">
+
+  <script src="https://kit.fontawesome.com/11144dca42.js" crossorigin="anonymous"></script>
+
+  <style>
+/*Dark & light Mode*/
+*,
+*:before,
+*:after {
+ box-sizing:border-box
+}
+::-webkit-scrollbar {
+ -webkit-appearance:none;
+ height:5px;
+ width:10px
+}
+::-webkit-scrollbar-thumb {
+ background-color:#c4c4c4
+}
+::-webkit-scrollbar-track {
+ background-color:#eee
+}
+html,
+body {
+ margin:0;
+ padding:0;
+ font-family:-apple-system,".sfnstext-regular",san francisco,roboto,segoe ui,helvetica neue,lucida grande,Arial,sans-serif;
+ background:0 0;
+ font-size:22px;
+ line-height:1.7;
+ color:rgba(0,0,0,.7);
+ font-weight:400;
+ -moz-font-feature-settings:"kern" 1;
+ -ms-font-feature-settings:"kern" 1;
+ -o-font-feature-settings:"kern" 1;
+ -webkit-font-feature-settings:"kern" 1;
+ font-feature-settings:"kern" 1;
+ text-rendering:optimizeLegibility;
+ overflow-x:hidden
+}
+@media screen and (max-width:600px) {
+ html,
+ body {
+  font-size:18px
+ }
+}
+strong,
+b {
+ color:rgba(26,26,26,.7)
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ font-family:-apple-system,".sfnstext-regular",san francisco,roboto,segoe ui,helvetica neue,lucida grande,Arial,sans-serif;
+ font-weight:700
+}
+a {
+ color:#00953e;
+ text-decoration:none;
+ transition:.2s ease-in
+}
+a:hover {
+ color:rgba(0,0,0,.7)
+}
+code,
+pre {
+ white-space:pre-wrap;
+ white-space:-moz-pre-wrap;
+ white-space:-pre-wrap;
+ white-space:-o-pre-wrap;
+ word-wrap:break-word
+}
+pre {
+ border:1px solid #e8e8e8;
+ padding-left:1em;
+ border-radius:4px
+}
+pre code {
+ font-size:15px
+}
+img {
+ max-width:100%
+}
+figure {
+ max-width:100%
+}
+.btn {
+ display:inline-block;
+ padding:5px 25px;
+ color:#fff;
+ background-color:#00953e;
+ border-radius:2px;
+ text-decoration:none;
+ border:none
+}
+.btn:hover,
+.btn:focus {
+ text-decoration:none;
+ border:none;
+ color:#fff;
+ background-color:#00c853
+}
+.btn:after {
+ content:" "!important
+}
+.btn strong {
+ color:#fff
+}
+@media screen and (max-width:600px) {
+ .btn {
+  padding:5px 10px
+ }
+}
+a {
+ text-decoration:none
+}
+a:hover {
+ text-decoration:none
+}
+p a {
+ color:rgba(0,0,0,.7);
+ text-decoration:none;
+ border-bottom:2px solid #62ffa3;
+ padding-bottom:4px;
+/* -webkit-transition:.4s ease;
+ -moz-transition:.4s ease
+*/
+}
+p a:hover {
+ border-bottom:2px solid #00c853
+}
+.demo-container {
+ max-width:1000px;
+ margin:0 auto
+}
+@media screen and (max-width:600px) {
+ .demo-container {
+  padding:0 15px
+ }
+}
+.demo-container .btn {
+ margin-bottom:2em
+}
+ 
+  
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="container-fluid navbar navbar-default">
+  <div class="container-fluid" style="border-bottom: gray double thin;border-top: gray double thin; height: 100px;">
+    <a class="navbar-brand navbar-center" href="#" style="max-height: 100%;"><img src="images/JADON-logo/Modification/logo_transparent-HTT_clipped.png" alt="" style="max-height: 280%;"></a> 
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-midRight" style="height: 100%;">
+        <li><a href="#"><i class="fas fa-bars fa-lg"></i></a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right navbar-midLeft">
+        <li><a href="#"><i class="fas fa-comment fa-lg"></i></a></li>
+        <li><a href="#"><i class="fas fa-envelope fa-lg"></i></a></li>
+        <!--dark/light button-->
+        <div class="dark-div" id="dark-div-2" onclick="dark()">
+          <button class="btn btn-info" style="width: 200px;float: none;">Switch</button>
+        </div>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container" style="height: 50px;"> 
+    
+      <ul class="nav navbar-nav navbar-right" style="font-size: 0.8em; margin: 0; padding: 0;">
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">GALLERY</a></li>
+        <li><a href="Team.html">TEAM</a></li>
+        <li><a href="#">PRESS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>   
+      </ul>
+  </div>
+  <div class="container-" style="border-top: gray double thin; height: 0;"></div>
+</nav>
+<!--phan body-->
+<section class="container-fluid" style="font-size:large;">
+<div class="row">
+<h1 class="text-center jumbotron page-header" style="font-size: xx-larger; font-weight: bolder;">All Services</h1>
+<ul id="li" class="col-sm-12" style="list-style-type:none;">
+    <li class="col-sm-12 panel panel-default" >
+        <ul class="row text-center panel-body" style="list-style: none;">
+            <li id="li" class="col-sm-4"><a href="" style="text-decoration: none;"><img src="images/ngoai-troi1.jpg" alt=""><br>OutSide </a></li>
+            <li id="li" class="col-sm-4"><a href="" style="text-decoration: none;"><img src="images/6.png" alt=""><br>Home</a></li>
+            <li id="li" class="col-sm-4"><a href="" style="text-decoration: none;"><img src="images/1.png" alt=""><br>Restaurant</a></li>
+        </ul>
+        <p class="text-right"></p>
+    </li>
+   <li class="col-sm-12 well" >
+        <h1>WEDDINGS</h1>
+        Your wedding is one of the most important and special days of your life and you should be able to enjoy every step of the wedding planning journey. Let JADON Event Planning help you achieve your dream wedding. We will be there every step of the way from design, budget management, venue and menu selection to on-site planning the day of your beautiful wedding.  Planning a wedding means making a plethora of decisions, managing vendors, tasks and deadlines.  This takes countless hours of planning, abundant energy and results in loads of stress that a bride and groom to be just don’t need.  Unload the worry and stress and let JADON Event Planning create the Wedding of your dreams!
+   </li>
+   <li class="col-sm-12 panel panel-default" >
+        <ul class="row text-center panel-body" style="list-style: none;">
+          <li id="li" class="col-sm-4"><a href="" style="text-decoration: none;"><img src="images/10.PNG" alt=""><br>Office</a></li>
+          <li id="li" class="col-sm-4"><a href="" style="text-decoration: none;"><img src="images/17.PNG" alt=""><br>Gadent</a></li>
+          <li id="li" class="col-sm-4"><a href="" style="text-decoration: none;"><img src="images/5.PNG" alt=""><br>Park</a></li>
+        </ul>
+        <p class="text-right"></p>
+      </li>
+      <li class="col-sm-12 well" >
+            <h1>CELEBRATIONS</h1>
+            Our creative team of consultants are only a JADON away to plan your next BIG event. Let us design and coordinate your event and take your vision to the next JADON.  Our goal is to transform and ordinary event into an extraordinary one. All you need to do is enjoy and have a great event experience. We specialize in Anniversaries, Birthdays, Baby Showers, Bachelor and Bachelorette Parties, Rehearsal Dinners, Bar Mitzvah’s, Quinceanera’s and so much more.
+       </li>
+    
+       <li class="col-sm-12 panel panel-default">
+            <ul class="row text-center panel-body" style="list-style: none;">
+              <li id="li" class="col-sm-4"><a href="" style="text-decoration: none;"><img src="images/hoinghi1.PNG" alt=""><br>Conference</a></li>
+              <li id="li" class="col-sm-4"><a href="" style="text-decoration: none;"><img src="images/Hoicho.PNG" alt=""><br>Fair</a></li>
+              <li id="li" class="col-sm-4"><a href="" style="text-decoration: none;"><img src="images/hoithao.PNG" alt=""><br>Sports Festival</a></li>
+            </ul>
+            <p class="text-right"></p>
+          </li>
+          <li class="col-sm-12 well" >
+                <h1>CORPORATE EVENTS</h1>
+                Your company brand is very important to all aspects of your business. Our team of professionals will take the necessary steps to ensure that your event will clearly communicate your image, goals and vision.  When these events are timed with product launches, we work with your corporate marketing team to time messaging and support broader corporate marketing initiatives.   Budgets are important, especially today, and are committed to staying within budget. JADON Event Planning will manage your entire event - from planning to successful execution. We specialize in conferences, branding and product launches, meetings and retreats, celebrations, employee recognition, team building and holiday parties. And of course our favorite, a customized event tailored to your vision.
+           </li>
+
+           <li class="col-sm-12 panel panel-default">
+            <ul class="row text-center panel-body" style="list-style: none;">
+              <li id="li" class="col-sm-4"><a href="" style="text-decoration: none;"><img src="images/Music.PNG" alt=""><br><i class="fa fa-music" aria-hidden="true"></i></a></li>
+              <li id="li" class="col-sm-4"><a href="" style="text-decoration: none;"><img src="images/read.PNG" alt=""><br><i class="fa fa-book" aria-hidden="true"></i></a></li>
+              <li id="li" class="col-sm-4"><a href="" style="text-decoration: none;"><img src="images/ball.PNG" alt=""><br><i class="fas fa-futbol"></i></a></li>
+            </ul>
+            <p class="text-right"></p>
+          </li>
+          <li class="col-sm-12 well" >
+                <h1>SCHOOL FUNDRAISING & EVENT PLANNING</h1>
+Looking for help to create, organize, plan and execute a successful event for your school? 
+ JADON -Event Planning - can customize a one of kind, memorable and, most importantly, profitable event experience. We are experienced in fundraising campaigns via gala events, high school dances, booster club and athletic association activities.  We have also lead customized experiences for teachers & staff award celebrations and appreciation days, along with education and training events.  JADON will customize an event tailored to your school’s specific needs and goals. Take the next step and contact JADON Event Planning for your complimentary consultation.
+
+           </li>
+ 
+</ul>
+</div>
+
+<a href="services.html"><img id="a" src="images/Capture1.PNG" width="10%" alt="" class="well"></a>
+
+
+</section>
+<script>
+  // dark/light mode
+  function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = '#333';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+        }
+    }
+</script>
+
+
+
+<!-- Footer -->
+<footer class="container-fluid navbar navbar-default text-center">
+  <div class="navbar navbar-default" style="border-bottom: gray double thin;border-top: gray double thin; height: 50px;">
+
+        <a href="#" style="padding: 30px;"><i class="fab fa-facebook-f fa-lg"></i></a>
+        <a href="#" style="padding: 30px;";><i class="fab fa-twitter fa-lg"></i></a>
+        <a href="#" style="padding: 30px;"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#" style="padding: 30px;"><i class="fab fa-linkedin fa-lg"></i></a>
+    </div>
+  </div>
+
+  <div class="navbar navbar-default" style="height: 100px; font-size: 0.8em; margin: 0; padding: 0,0,0,0;">
+        <a href="services.html" style="padding: 20px;">SERVICES</a>
+        <a href="#" style="padding: 20px;">PORTFOLIO</a>
+        <a href="#" style="padding: 20px;">GALLERY</a>
+        <a href="Team.html" style="padding: 20px;">TEAM</a>
+        <a href="#" style="padding: 20px;">PRESS</a>
+        <a href="contact.html" style="padding: 20px;">CONTACT</a>
+  </div>
+
+
+
+
+</footer>
+
+</body>
+</html>

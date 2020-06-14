@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    td{ /*canh giua*/
+        width: 100%;
+        margin: auto;
+        text-align: center;
+
+        font-weight: bolder;
+        font-size: x-large;
+        padding: 20px 50px ;
+        
+      }
+     #table{
+         border: rgb(34, 25, 88) solid;
+         border-top-color:magenta;
+         border-left:none ;
+         border-right:none;
+     }
+     a{
+       text-decoration: none;
+       color: black; 
+     }
+     h1{
+        
+         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+         font-size: 50px;
+         color:brown;
+     }
+     
+
+     label{
+        display: inline-block;
+        width: 250px;
+        font-size: x-large;
+       /* border: greenyellow solid;*/
+     }
+        input[type='text'],
+        input[type='password'],
+        input[type='email'],
+        input[type='date'],
+        input[type='tel'],
+        select
+        {
+            width: 299.9px;
+            height: 29.9px;
+            font-weight: 700;
+         /*   border: indigo solid;*/
+        }
+        input[type='submit']{
+            width: 200px;
+            height: 50px;
+            font-weight: 700;
+        }
+        input:focus{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<header>
+
+<table id="table">
+    <tr>
+        <td><img src="logo.PNG" width="290px" alt=""></td>
+        <td><a href="home.html" style="color:orange;">Home</a></td>
+        <td><a href="#">All Recipes</a></td>
+        <td><a href="reservation.html">Reservation</a></td>
+        <td><a href="#">Contac</a></td>
+        <td><img src="signin.PNG"  alt=""></td>
+    </tr>
+</table>
+
+</header>
+
+
+<section  style="padding: 25px 29% 0px 29%;">
+    <form action="" id="form" name="form" style="border:green solid ;font-size:xx-large;padding:25px 29px 25px 29px; font-weight: bolder;">
+       <h1>Your Choice</h1>
+       <label for="">Customer name</label>
+       <input type="text" name="txtN" id="txtN"><br><br>
+       <label for="">Telephone</label>
+       <input type="tel" name="txtTP" id="txtTP"><br><br>
+    
+    <label for="">Menu</label>
+    <select name="menu" id="menu">
+        <option value="Christmas">Christmas</option>
+        <option value="Thanksgiving">Thanksgiving</option>
+        <option value="Halloween">Halloween</option>
+        <option value="Easter">Easter</option>
+        <option value="4th July">4th July</option>
+    </select><br><br>
+
+    <label for="">Drinking</label>
+    <select name="drinking" id="drinking">
+        <option value="Wine">Wine</option>
+        <option value="Cocktail">Cocktail</option>
+        <option value="Coffee">Coffee</option>
+        <option value="Tea">Tea</option>
+       
+    </select><br><br>
+
+    <input type="submit" value="Submit"><br><br>
+    <label for="">Your Information</label><br>
+    <textarea name="area" id="area" cols="75" rows="10" readonly></textarea>
+
+
+    </form>
+    
+</section>
+</body>
+<script>
+   document.getElementById("form").onsubmit=function(){
+
+    var name=document.getElementById("txtN").value;
+    if(name.length<1){
+       alert("The name can't be blank");
+       document.getElementById("txtN").focus();
+       return false; 
+    }
+    /*
+    bỏ require trong ô label mới ra
+    var name=document.getElementById("txtN").value;
+    if(name==""){
+        alert("The name can't be blank");
+        return false;
+    }
+    */
+    var phone=document.getElementById("txtTP").value;
+    if(phone.length<1){
+        alert("The Telephone can't be blank");
+        document.getElementById("txtTP").focus();
+        return false;
+    } 
+
+       // lay gia tri in ra
+       var name=document.getElementById("txtN").value.trim();
+       var phone=document.getElementById("txtTP").value;
+       var menu=document.getElementById("menu").value;
+       var drink=document.getElementById("drinking").value;
+       // in ra khung textarea
+       var a=[];
+    a.push("Your name:"+name);
+    a.push("Telephone:"+phone);
+    a.push("Menu:"+menu);
+    a.push("Drinking:"+drink);
+    // in ra area
+   document.getElementById("area").value=a.join("\n");
+    // in ra form
+    alert(a.join("\n"));
+    // in ra newtab
+    window.open().document.writeln(a.join("<br>"));
+    return false;
+
+   }
+</script>
+</html>

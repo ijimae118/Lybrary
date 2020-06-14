@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: auto;
+            border: blue solid thin;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+
+        tr:nth-child(odd) {
+            background-color: cornsilk;
+        }
+
+        tr:nth-child(1) {
+            background-color: darkblue;
+            color: greenyellow;
+        }
+
+        td:nth-child(3) {
+            background-color: rgb(22, 183, 204);
+        }
+
+        td:nth-child(1) {
+            width: 50px;
+        }
+
+        td:nth-child(2) {
+            width: 250px;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Table Demo</h2>
+    <hr>
+
+    <table>
+        <caption>Danh Sach Sinh Vien</caption>
+        <tr>
+            <th>STT</th>
+            <th>Ho va Ten</th>
+            <th>Ma lop</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Le Minh</td>
+            <td rowspan="3">1910-M1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Do Minh Phong</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Tran Ngoc Bao Thien</td>
+        </tr>
+        <tr>
+            <td colspan="3">Tong so sv: 3</td>
+        </tr>
+    </table>
+</body>
+
+</html>

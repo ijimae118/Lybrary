@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+         <div class="jumbotron">Load() Ajax Demo...</div>
+    </div>
+    <div class="row">
+        <!--khoi chua button-->
+        <div class="col-md-3" style="background-color: wheat; height:500px;">
+        <button id="btLoadBG" type="button" class="btn btn-success">Load Bang Bao Gia</button><br><br>
+        <button id="btLoadHI" type="button" class="btn btn-danger">Load Hinh Anh</button>
+        </div>
+        <!--khoi chua noi dung duoc load bang ky thuat ajax-->
+        <div class="col-md-9" style="background-color: turquoise;height:500px; margin: auto; border: tomato solid;" id="content"></div>
+
+    </div>
+    <script>
+    $(document).ready(function(){
+        // lap trinh cho su kien click btLoadBG
+        $("#btLoadBG").on("click",function(){
+            $("#content").load("d04_danhsach.html");
+        });
+        // lap trinh cho su kien click btLoadHI
+        $("#btLoadHI").on("click",function(){
+            $("#content").load("d04_image.html");
+            
+        });
+
+    });
+    </script>
+</body>
+</html>

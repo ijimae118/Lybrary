@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h2>JQuery Demo- hide() /show() /toggle</h2>
+        </div>
+        <div>
+            <input type="button" value="Show" class="btn btn-danger" id="btSHOW">
+            <input type="button" value="Hide" class="btn btn-info" id="btHIDE">
+            <input type="button" value="Toggle" class="btn btn-warning" id="btTOG">
+        </div>
+        <div id="main">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum eos, modi velit corporis voluptatem
+                repellendus ratione obcaecati fugiat dolore impedit doloremque veritatis. Veritatis deserunt explicabo
+                hic maxime recusandae placeat blanditiis.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero minus et voluptatibus? Iste commodi
+                nesciunt culpa accusantium sunt modi beatae iure placeat recusandae corporis neque incidunt saepe, ea
+                itaque blanditiis?
+            </p>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, nemo. Et est esse fuga error repellendus
+                aliquam debitis culpa animi ratione? Accusantium quas expedita labore amet perferendis, non dicta animi.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {   
+            // lap trinh cho su kien click button show
+            $("#btSHOW").click(function () {
+                // Hien thi noi dung cua div "main"
+                $("#main").show();
+            });
+
+            // lap trinh cho su kien click button hide
+            $("#btHIDE").click(function () {
+                // An noi dung cua div "main"
+                $("#main").hide();
+            });
+            
+             // lap trinh cho su kien click button toggle(bao gom ca 2 cai tren:on+off)
+             $("#btTOG").click(function () {
+                 // (Hien thi && an noi) dung div "main"
+                $("#main").toggle();
+            });
+         
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+    p{
+        border: white solid;
+        background-color: gray;
+        text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+        font-size: xx-large;
+        text-align: center; 
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h2>JSON DEMO</h2>
+            <input type="button" value="load" class="btn btn-info" id="btLOAD"> 
+        </div>
+        <div class="#main">
+            <p></p>
+        </div>
+        <footer class="" >oh shit</footer>
+    </div>
+
+    
+
+    <script>
+        $(document).ready(function(){
+          // khai bao 1 mang JSON danh sach sinh vien
+          var ds=[
+              {"id":"ST1","name":"Le Minh","tel":113},
+              {"id":"ST2","name":"Le Thi ","tel":116},
+              {"id":"ST3","name":"Le Tam","tel":119},
+              {"id":"ST4","name":"Le loi","tel":120}
+          ];
+          // lap trinh cho su kien load click button load
+          $("#btLOAD").click(function(){
+              var dsTen=[];
+
+              ds.forEach(item =>{
+                  dsTen.push(item.name);
+                 // alert(item.name);
+              });
+              
+              $("p").text(dsTen.join(","));
+          });
+        
+        });
+    </script>
+  
+</body>
+</html>

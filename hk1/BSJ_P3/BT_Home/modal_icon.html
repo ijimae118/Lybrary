@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="https://kit.fontawesome.com/11144dca42.js" crossorigin="anonymous"></script>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+/*Dark & light Mode*/
+*,
+*:before,
+*:after {
+ box-sizing:border-box
+}
+::-webkit-scrollbar {
+ -webkit-appearance:none;
+ height:5px;
+ width:10px
+}
+::-webkit-scrollbar-thumb {
+ background-color:#c4c4c4
+}
+::-webkit-scrollbar-track {
+ background-color:#eee
+}
+html,
+body {
+ margin:0;
+ padding:0;
+ font-family:-apple-system,".sfnstext-regular",san francisco,roboto,segoe ui,helvetica neue,lucida grande,Arial,sans-serif;
+ background:0 0;
+ font-size:22px;
+ line-height:1.7;
+ color:rgba(0,0,0,.7);
+ font-weight:400;
+ -moz-font-feature-settings:"kern" 1;
+ -ms-font-feature-settings:"kern" 1;
+ -o-font-feature-settings:"kern" 1;
+ -webkit-font-feature-settings:"kern" 1;
+ font-feature-settings:"kern" 1;
+ text-rendering:optimizeLegibility;
+ overflow-x:hidden
+}
+@media screen and (max-width:600px) {
+ html,
+ body {
+  font-size:18px
+ }
+}
+strong,
+b {
+ color:rgba(26,26,26,.7)
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ font-family:-apple-system,".sfnstext-regular",san francisco,roboto,segoe ui,helvetica neue,lucida grande,Arial,sans-serif;
+ font-weight:700
+}
+a {
+ color:#00953e;
+ text-decoration:none;
+ transition:.2s ease-in
+}
+a:hover {
+ color:rgba(0,0,0,.7)
+}
+code,
+pre {
+ white-space:pre-wrap;
+ white-space:-moz-pre-wrap;
+ white-space:-pre-wrap;
+ white-space:-o-pre-wrap;
+ word-wrap:break-word
+}
+pre {
+ border:1px solid #e8e8e8;
+ padding-left:1em;
+ border-radius:4px
+}
+pre code {
+ font-size:15px
+}
+img {
+ max-width:100%
+}
+figure {
+ max-width:100%
+}
+.btn {
+ display:inline-block;
+ padding:5px 25px;
+ color:#fff;
+ background-color:#00953e;
+ border-radius:2px;
+ text-decoration:none;
+ border:none
+}
+.btn:hover,
+.btn:focus {
+ text-decoration:none;
+ border:none;
+ color:#fff;
+ background-color:#00c853
+}
+.btn:after {
+ content:" "!important
+}
+.btn strong {
+ color:#fff
+}
+@media screen and (max-width:600px) {
+ .btn {
+  padding:5px 10px
+ }
+}
+a {
+ text-decoration:none
+}
+a:hover {
+ text-decoration:none
+}
+p a {
+ color:rgba(0,0,0,.7);
+ text-decoration:none;
+ border-bottom:2px solid #62ffa3;
+ padding-bottom:4px;
+/* -webkit-transition:.4s ease;
+ -moz-transition:.4s ease
+*/
+}
+p a:hover {
+ border-bottom:2px solid #00c853
+}
+.demo-container {
+ max-width:1000px;
+ margin:0 auto
+}
+@media screen and (max-width:600px) {
+ .demo-container {
+  padding:0 15px
+ }
+}
+.demo-container .btn {
+ margin-bottom:2em
+}
+
+/*style form*/
+input[type=text], select, textarea {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: vertical;
+}
+label{
+display: inline-block;
+width: 15%;
+}
+input[type=email],input[type=tel]{
+width: 70%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: vertical;
+}
+input[type=date]{
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: vertical;
+}
+
+input[type=submit] {
+background-color: #4CAF50;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+input[type=submit]:hover {
+background-color: #45a049;
+}
+
+/*style body*/
+
+/* Set a style for all buttons 
+i {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+i:hover {
+  opacity: 0.8;
+}
+*/
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 39%;
+  border:5px solid #4CAF50 ;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 0;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: rgb(19, 23, 247);
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+/*input*/
+#div::before {
+    content: 'OFF';
+    right: 40px;
+    color: rgb(80, 233, 238);
+    background-color: blue;
+   
+    }
+#div::after {
+    content: 'ON';
+    right: 40px;
+    color: tomato;
+    background-color: red;
+    
+    }
+
+</style>
+</head>
+<body>
+
+<h2>Modal Login Form</h2>
+
+<i class="fas fa-comment fa-lg"  onclick="document.getElementById('id01').style.display='block'" style="width:auto;"></i>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="#" method="post" id="form" name="form">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/Capture5.PNG" alt="Avatar" class="avatar">
+      <h1>~~~~~Writte Us~~~~~</h1>
+    </div>
+    <div class="container">
+       
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name.." required><br>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Email" required title="123@gmail.com" pattern="^[a-zA-Z0-9]{3,}@[a-zA-Z0-9]{2,5}\.[a-zA-Z0-9]{2,4}$"><br>
+
+            <label for="tel">Telephone:</label>
+            <input type="tel" name="tel" id="tel" placeholder="Telephone" required title="113" pattern="^[0-9]{3,12}$"><br>
+        
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." title="text" style="height:200px"></textarea><br>
+         
+            <label for="country">Event type:</label>
+            <h4>What kind of event?</h4>
+            <select id="event" name="event" required>
+              <option value="" style="display:none;">Event</option>
+              <option value="Wedding">Wedding</option>
+              <option value="Celebrations">Celebrations</option>
+              <option value="Corporate">Corporate Events</option>
+              <option value="School Fundraising & Event Planning">School Fundraising & Event Planning</option>
+              <option value="Other">Other</option>
+            </select><br>
+            <label for="date">Event Date:</label>
+            <input type="date" name="date" id="date" required title="The month of the event must be greater than or equal to 3 months from the current month"><br>
+            <input type="submit" value="Submit"><br><br>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Contact &emsp;<a href="https://globfone.com/call-phone/"><i style="font-size: xx-large;" class="fa fa-phone-volume"></i></a></span>
+    </div>
+  </form>
+</div>
+<!--dark/light mode-->
+<div class="dark-div" id="dark-div-2" style="background-color: rgb(255, 255, 255); color: rgb(51, 51, 51);" onclick="dark()">
+  <button style="float: right;border-radius:50% ;"><div id="div"></div></button>
+</div>
+
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+// dark/light mode
+  function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = '#333';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+        }
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>parseInt</title>
+</head>
+
+<body>
+    <h2>parseInt() / parseFloat() - isNaN() demo </h2>
+    <hr>
+    <label for="">nhap so thu 1: </label>
+    <input type="text" name="1" id="1" value="12"> <br>
+    <label for="">nhap so thu 2: </label>
+    <input type="text" name="2" id="2" value="34"> <br>
+
+    <input type="button" value="Add" id="3" name="3"> <br>
+    <label for="">Ket qua</label>
+    <input type="text" name="4" id="4" readonly>
+
+</body>
+<script>
+    // alp trinh chi su kien click tren button btAdd
+    document.getElementById("3").onclick = function () {
+        //lay so nhap trong othu nhat 
+        var n1 = document.getElementById("1").value;
+
+        //lay so nhap trong othu  hai
+        var n2 = document.getElementById("2").value;
+        var n3 = "";
+        //kiem tra n1 n2 co phai la so ko
+        if (isNaN(n1) || isNaN(n2)) {
+            //n1 or n2 la 1 chuoi ky tu bat ki
+            n3 = n1 + n2;
+        }
+        else {
+            //n1 n2 la chuoi so
+            n3 = parseInt(n1) + parseInt(n2);
+        }
+        //dat n3 vo o txtKQ
+        document.getElementById("4").value = n3;
+    }
+</script>
+
+</html>

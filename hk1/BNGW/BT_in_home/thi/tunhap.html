@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h2>Nháp</h2>
+    <hr>
+    <h2>Bài toán phép nhân</h2>
+    <p id="ketqua" name="ketqua">Row Name:</p><br>
+
+    <label for="">nhap so thu 1:</label>
+    <input type="text" name="1" id="1" value="12"><br>
+
+    <label for="">nhap so thu 2:</label>
+    <input type="text" name="2" id="2" value="34"><br>
+
+    <input type="button" value="Add" id="3" name="3"><br>
+    <label for="">ket qua cho ra:</label>
+    <input type="text" name="4" id="4" readonly><br>
+
+
+    <input type="button" value="Mini Casio" id="btCasio" name="btCasio"><br>
+    <p id="ketqua1" name="ketqua1"></p>
+    
+    
+    </body>
+    <script>
+      
+    
+    document.writeln("<b>Bài Demo</b>");
+    document.getElementById("3").onclick = function () {
+    
+    var bt= prompt("Nhập tên ng sử dụng \n Biểu thức nhân:","_Your Name_");
+       if(bt!= null){
+           var kq=bt;
+           document.getElementById("ketqua").innerHTML=kq;
+       }
+       else{
+           document.getElementById("ketqua").innerHTML="Nothing to do !!!"
+       }
+    
+    
+       alert("Ôi giời !!! Easy ");
+    
+       var ans = confirm("z thui à :)))....Nhìn kỹ nha\n....... Thui tự làm tiếp đi!!!\nTui off đây Bye Bye");
+          // alert(ans);
+           if(ans==true){
+               // bam nut ok
+               window.close();
+               
+           }else{
+               alert("Thôi!!!nhìn you khổ quá :)) !!! Cho nhìn kỹ hơn nèk:")
+           }
+    
+        var n1 = document.getElementById("1").value;
+       
+        var n2 = document.getElementById("2").value;
+        var n3="";
+        if(isNaN(n1)||isNaN(n2)){
+            n3=n1+n2;
+        }
+        else{
+            n3=parseInt(n1) * parseInt(n2);
+        }
+        document.getElementById("4").value= n3;
+    }
+    
+    
+    
+    
+    document.getElementById("btCasio").onclick = function(){
+       var bt= prompt("Nhap bieu thuc [12+4-6*4] (Number):","12+14-6*4");
+       if(bt!= null){ 
+            var kq=eval(bt);
+         //   alert("kq"); đáp án = kq
+           document.getElementById("ketqua1").innerHTML=kq;
+       }
+       else{
+           document.getElementById("ketqua1").innerHTML="Nothing to do !!!"
+       }
+    }
+    
+    </script>
+    
+    </html>

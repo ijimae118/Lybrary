@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            on() /off() event delegate demo
+        </div>
+        <div>
+            <button type="button" id="btAdd" class="btn btn-danger">Add new item</button>
+            <button type="button" id="btRemoveEvent" class="btn btn-success">Undelegate Item Click</button>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>
+        </div>
+
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("li").on("click",function(){
+           alert("Click Me !!!");
+            });
+
+            $("#btRemoveEvent").on("click",function(){
+                // huy cac trinh xu ly su kien tren cac list item
+                $("li").off("click");
+            });
+
+            $("#btAdd").on("click",function(){
+           
+                $("ul").append("<li>*New Item*</li>")
+            });
+
+        });
+    </script>
+</body>
+</html>

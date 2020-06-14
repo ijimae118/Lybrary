@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration form</title>
+    <style>
+        body{
+            background-color: rgb(22, 9, 9);
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            background-color: rgb(248, 246, 246);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 700px;
+            height: 600px;
+            padding-top: 90px;
+            box-shadow: 2px 3px 4px gray;
+        }
+        h4{
+            margin-left: 50px;
+        }
+        li{
+            margin-left: 90px;
+        }
+        table{
+            margin: 25px auto;
+        }
+        tr{
+            text-align: right;
+        }
+        .hobby{
+            float: left;
+        }
+        .submit{
+            text-align: center;
+        }
+        .sex{
+            padding-right:50px;
+        }
+        .date{
+            padding-right: 30px;
+        }
+        .hobby{
+            margin-right: -60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2 style="color: blue; text-align: center;">REGISTRATION FORM</h2><br>
+        <h4 style="color: blue; text-indent: 25px;">Notes</h4>
+        <ol>
+            <li>Fields with  (<span style="color: red;">*</span>) mark must be entered</li>
+            <li>Login name have no spaces</li>
+        </ol>
+        <br><br>
+    <form action="" name="formDK" id="formDK">
+        <table>
+            <tr>
+                <td>Login name<span style="color: red;">*</span></td>
+                <td><input type="text" name="txtID" id="txtID" required></td>
+            </tr>
+            <tr>
+                <td>Password<span style="color: red;">*</span></td>
+                <td><input type="password" name="txtPass" id="txtPass" required></td>
+            </tr>
+            <tr>
+                <td>Password Confirm<span style="color: red;">*</span></td>
+                <td><input type="password" name="txtPasscon" id="txtPasscon" required></td>
+            </tr>
+            <tr>
+                <td>Full name<span style="color: red;">*</span></td>
+                <td><input type="text" name="txtName" id="txtName" required></td>
+            </tr>
+            <tr>
+                <td>Address<span style="color: red;">*</span></td>
+                <td><input type="text" name="txtAdd" id="txtAdd" required></td>
+            </tr>
+            <tr>
+                <td>Email<span style="color: red;">*</span></td>
+                <td><input type="email" name="txtMail" id="txtMail" required></td>
+            </tr>
+            <tr>
+                <td>Sex</td>
+                <td class="sex">
+                    <input type="radio" name="txtGender" id="txtMale" checked> Male
+                    <input type="radio" name="txtGender" id="txtFemale"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Date of birth</td>
+                <td class="date"><input type="date" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>Phone number</td>
+                <td><input type="tel" name="txtPhone" id="txtPhone"></td>
+            </tr>
+            <tr>
+                <td>Hobbies</td>
+                <div class="hobby">
+                <td class="hobby"><input type="radio" name="txtHob" id="txtSwim">Swimming
+                <input type="radio" name="txtHob" id="txtDan">Dancing
+                <input type="radio" name="txtHob" id="txtShop">Shopping</td>
+            </div>
+            </tr>
+            <tr>
+                <td>Comment</td>
+                <td><textarea name="txtCom" id="txtCom" cols="22" rows="5"></textarea></td>
+            </tr>
+        
+        </table>
+        <div class="submit">
+            <input type="submit" value="Submit" name="txtSub" id="txtSub">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+    </div>
+</body>
+<script>
+    //lap trinh cho nut submit
+    //chủ yếu là phải lấy dữ liệu phía trên trước tiên sau đó gán như bên C
+    document.getElementById("formDK").onsubmit = function(){
+        //lay du lieu tu login name and password
+        //hàm trim() dùng để cắt khoảng cách phía trước và phía sau chuỗi
+        var loginName = document.getElementById("txtID").value.trim();
+        //kiem tra login name tren 5 ki tu
+        //bieu thuc quy tac session 13
+        var r = /^[a-z0-9]{5,}$/ig;
+        if(r.test(loginName)==false){
+            alert("Tên đăng nhập không hợp lệ");
+            return false; //dòng này khi làm sai sẽ giữ nguyên màn hình không xóa hết phần đã điền
+        }
+        var passWord = document.getElementById("txtPass").value.trim();
+        var r = /^[a-z0-9]{5,}$/
+        if(r.test(passWord)==false){
+            alert("Password không hợp lệ");
+            return false;
+        }
+        var passWordcon = document.getElementById("txtPasscon").value.trim();
+        if(passWord !== passWordcon){
+            alert("Password should be same as Password Confirm.");
+            return false;
+        }
+        var phoneNum = document.getElementById("txtPhone").value;
+        var num = /^\d$/;
+        if(num.test(phoneNum)==false){
+            alert("Phonenumber must has digit letter only.");
+            return false;
+            
+        }
+    }
+</script>
+</html>

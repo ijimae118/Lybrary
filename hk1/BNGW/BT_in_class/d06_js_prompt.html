@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prompt</title>
+</head>
+<body>
+    <h2>prompt(), eval() demo</h2>
+    <hr>
+    <input type="button" value="Mini Casio" id="btCasio" name="btCasio"><br>
+    <p id="ketqua" name="ketqua"></p>
+</body>
+<script>
+    // lap trinh cho su kien bam nut Casio
+    document.getElementById("btCasio").onclick = function(){
+       var bt= prompt("Nhap bieu thuc [12+4-6*4]:","12+4-6^4");
+       if(bt!= null){
+        var kq=eval(bt);
+           document.getElementById("ketqua").innerHTML=kq;
+       }
+       else{
+           document.getElementById("ketqua").innerHTML="Nothing to do !!!"
+       }
+    }
+</script>
+</html>

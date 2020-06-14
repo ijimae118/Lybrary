@@ -1,0 +1,47 @@
+hr {
+    width: 60%;
+    margin-left: 230px;
+}
+ .main h2 {
+text-align:center;
+ padding: 10px;
+text-transform: uppercase;
+}
+.main .em {
+    margin: 20px;
+    background: rgb(243, 243, 243);
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 10px 6px -9.5px grey;
+    
+
+}
+.main .tittle p {
+    width: 800px;
+    margin: auto;
+    text-indent: 3em;
+}
+.main .row .ft-cate img {
+    margin: 0px 20px;
+}
+.tittle p {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500
+}
+.main .row .ft-text {
+    height: 197px;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 80px;
+}
+.main .row .ft-text h3:hover {
+    color: rgb(185, 147, 63);
+    transition: all 0.3s ease;
+    text-decoration: underline
+}
+.main .row .ft-text p {
+    font-size: 15px;
+    width: 330px;
+    margin: auto;
+}

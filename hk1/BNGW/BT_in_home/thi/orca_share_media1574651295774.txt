@@ -1,0 +1,277 @@
+/*------Nam Sinh----------*/
+var ns = document.getElementById("txtNS").value;
+            //tao 1 doi tuong date chua ngay thang nam sinh cua user
+            var dateNS = new Date(ns);
+            //lay nam sinh
+            var namsinh = dateNS.getFullYear();
+
+            //tao ra doi tuong Date chua ngay gio hien tai cua he thong may tinh
+            var today = new Date();
+            //lay nam hien tai
+            var namnay = today.getFullYear();
+            var tuoi = namnay - namsinh;
+
+            // tạo đk if
+             if (tuoi < 17) {
+            alert("Chua du 17 tuoi!!!!!");
+            return false;
+            }
+            alert(tuoi);
+
+vd : sua 3 chổ để làm cái mới ..1:txtBD..2&3:sn..
+ var sn = document.getElementById("txtBD").value;
+        var dateNS = new Date(sn);
+        var namsinh = dateNS.getFullYear();
+        var today = new Date();
+        var namnay = today.getFullYear();
+        var tuoi = namnay - namsinh;
+        if (tuoi < 17) {
+            alert("Chua du 17 tuoi!!!!!");
+            return false;
+        }
+        alert(tuoi);
+
+/*----------Xuat ra màn hình moi----------*/
+var newTab = window.open();
+            newTab.document.write(a.join("<br>"));
+            return false;
+/*----------Xuat ra thông tin theo nhiều kiểu----------*/
+vd:
+   var a=[];
+    a.push("Your name:"+name);
+    a.push("Telephone:"+phone);
+    a.push("Menu:"+menu);
+    a.push("Drinking:"+drink);
+    // in ra trong textarea:
+    document.getElementById("area").value=a.join("\n");
+    // in ra form thông báo trên màn hình:
+    alert(a.join("\n"));
+    // in ra newtab windown:
+    window.open().document.writeln(a.join("<br>"));
+    return false;
+/*---------------Lay giá tri trong radio------------*/
+//==true co cung dc ,ko co cung dc.
+    var gt=document.getElementById("rdMale").checked==true?"nam":"nu";
+/*---------------Lay giá tri trong checkbox------------*/
+var st = [];
+    if(document.getElementById("txtShop").checked){
+        st.push(document.getElementById("txtShop").value);
+    }
+    var a=[];
+    a.push("Hobbies:" + st.join(", "))
+/*-------------Lay giá tri trong checkbox (dùng for)-----------*/
+var checkbox = document.getElementsByName("txtHob");
+        var result = "";
+
+        for(var i = 0; i<checkbox.length;i++){
+            if(checkbox[i].checked === true){
+            result += ' ['+checkbox[i].value+']';
+            }
+        }
+    var a=[];
+    a.push("Hobbies:" + st);
+/*------các pattern và tiện dụng-------*/
+//required;autofocus;readonly; value="năm-tháng-ngày"
+//check so dien thoai--  pattern="^[0-9]{3,12}$" or pattern="^\d{3,}$" lưu ý \d chỉ áp dụng cho số.
+//check nhap email--  pattern="^[a-z0-9]{3,}@[a-z0-9]{2,5}\.[a-zA-Z0-9]{2,4}$"
+
+/*------Ô ko thể để trống và autofocus về lại vùng sai và các vd cần lưu ý-------*/
+ var name=document.getElementById("txtN").value;
+    if(name.length<1){
+       alert("The name can't be blank");
+       document.getElementById("txtN").focus();
+       return false; 
+    }
+vd:
+document.getElementById("form").onsubmit=function(){
+        // trim() để bỏ ... dư  sau chữ
+        // ig để nhận chử in Hoa 
+       var name=document.getElementById("txtLN").value.trim();
+c1:        if(name.length<5){
+            alert(" login name phai co it nhat 5 ky tu!");
+            return false;
+        }
+        alert("1");
+       
+c2: /*     var r=/^[a-z0-9]{5,}$/ig;
+       if(r.test(name)==false){
+           alert("Ten dang nhap ko hop le!");
+          return false; 
+       } alert("1");
+    */
+       var password=document.getElementById("txtP").value.trim();
+c1:       var r=/^\d{5,}$/;
+       if(r.test(password)==false){
+           alert("Mat khau khong hop le!");
+           return false;
+       } alert("2");
+c2:   /*  if(password.length<5){
+            alert(" login phai co it nhat 5 ky tu!");
+            return false;
+        } alert("2");
+    */
+// vì dù là nhập so hay là chuổi thì nó củng xem la chuổi
+       var passconfirm=document.getElementById("txtPC").value.trim();
+       if(password!=passconfirm){
+        alert("Password should be same as Password Confirm.");
+            return false;
+       }
+
+       alert("3");
+}
+/*------Tạo nút nối với page html khác-------*/
+ <input type="button" value="btOK" id="btOK" name="btOK">
+ <script> 
+       document.getElementById("btOK").onclick=function(){
+        location.assign("d09_function.html");
+       }
+</script>
+/*------Các script phổ biến-------*/
+// viết ra hàng chữ trong page
+<script>
+     document.writeln("<h3> Hello ,welcome to javascript </h3>");
+</script>
+
+// thông báo 1 button: ok; alert
+<input type="button" value="Click me" id="btClick" name="btClick">
+<script>
+     //alert("Oi gioi oiiii!!!\n Tui day nek!!!");
+    // lap trinh cho su kien bam nut btClick
+    document.getElementById("btClick").onclick = function bấm(){
+     alert("Oi gioi oiiii!!!\n Tui day nek!!!");
+    }
+</script>
+
+// thông báo 2 button: ok && cancel ;confirm
+  <input type="button" value="Click Me, Honey" id="btOK" name="btOk">
+   <script>
+       document.getElementById("btOK").onclick=function(){
+           var ans = confirm("Nghi choi , nhaaaaa....!!!");
+          // alert(ans);
+           if(ans==true){
+               // bam nut ok
+               window.close();
+           }
+       }
+   </script>
+// js_pase:isNaN()=is not a number;parseInt();
+<body>
+    <h2>parseInt() / parseFloat() - isNaN() demo </h2>
+    <hr>
+    <label for="">nhap so thu 1: </label>
+    <input type="text" name="1" id="1" value="12"> <br>
+    <label for="">nhap so thu 2: </label>
+    <input type="text" name="2" id="2" value="34"> <br>
+
+    <input type="button" value="Add" id="3" name="3"> <br>
+    <label for="">Ket qua</label>
+    <input type="text" name="4" id="4" readonly>
+
+</body>
+<script>
+    // lap trinh chi su kien click tren button btAdd
+    document.getElementById("3").onclick = function () {
+        //lay so nhap trong o thu nhat 
+        var n1 = document.getElementById("1").value;
+
+        //lay so nhap trong o thu  hai
+        var n2 = document.getElementById("2").value;
+        var n3 = "";
+        //kiem tra n1 n2 co phai la so ko
+        if (isNaN(n1) || isNaN(n2)) {
+            //n1 or n2 la 1 chuoi ky tu bat ki
+            n3 = n1 + n2;
+        }
+        else {
+            //n1 n2 la chuoi so
+            n3 = parseInt(n1) + parseInt(n2);
+        }
+        //dat n3 vo o txtKQ
+        document.getElementById("4").value = n3;
+    }
+</script>
+
+// js_prompt:dùng để nhập 1 biểu thức ,eval(); 
+// eval() hình như là chữ và chỉ in ra được bằng .innerHTML=kq; 
+<body>
+    <h2>prompt(), eval() demo</h2>
+    <hr>
+    <input type="button" value="Mini Casio" id="btCasio" name="btCasio"><br>
+    <p id="ketqua" name="ketqua"></p>
+</body>
+<script>
+    // lap trinh cho su kien bam nut Casio
+    document.getElementById("btCasio").onclick = function(){
+       var bt= prompt("Nhap bieu thuc [12+4-6*4]:","12+4-6^4");
+       if(bt!= null){
+        var kq=eval(bt);
+           document.getElementById("ketqua").innerHTML=kq;
+       }
+       else{
+           document.getElementById("ketqua").innerHTML="Nothing to do !!!"
+       }
+    }
+</script>
+
+
+ ví dụ cho phần trên bao gồm alert,confirm,prompt là:tunhap.html
+<body>
+    <h2>Nháp</h2>
+    <hr>
+    <h2>Bài toán phép nhân</h2>
+    <p id="ketqua" name="ketqua">Row Name:</p><br>
+    <label for="">nhap so thu 1:</label>
+    <input type="text" name="1" id="1" value="12"><br>
+    <label for="">nhap so thu 2:</label>
+    <input type="text" name="2" id="2" value="34"><br>
+    <input type="button" value="Add" id="3" name="3"><br>
+    <label for="">ket qua cho ra:</label>
+    <input type="text" name="4" id="4" readonly><br>
+    <input type="button" value="Mini Casio" id="btCasio" name="btCasio"><br>
+    <p id="ketqua1" name="ketqua1"></p>
+    </body>
+    <script>
+    document.writeln("<b>Bài Demo</b>");
+    document.getElementById("3").onclick = function () {
+    var bt= prompt("Nhập tên ng sử dụng \n Biểu thức nhân:","_Your Name_");
+       if(bt!= null){
+           var kq=bt;
+           document.getElementById("ketqua").innerHTML=kq;
+       }
+       else{
+           document.getElementById("ketqua").innerHTML="Nothing to do !!!"
+       }
+       alert("Ôi giời !!! Easy ");
+       var ans = confirm("z thui à :)))....Nhìn kỹ nha\n....... Thui tự làm tiếp đi!!!\nTui off đây Bye Bye");
+          // alert(ans);
+           if(ans==true){
+               // bam nut ok
+               window.close();
+           }else{
+               alert("Thôi!!!nhìn you khổ quá :)) !!! Cho nhìn kỹ hơn nèk:")
+           }
+        var n1 = document.getElementById("1").value;
+        var n2 = document.getElementById("2").value;
+        var n3="";
+        if(isNaN(n1)||isNaN(n2)){
+            n3=n1+n2;
+        }
+        else{
+            n3=parseInt(n1) * parseInt(n2);
+        }
+        document.getElementById("4").value= n3;
+    }
+    document.getElementById("btCasio").onclick = function(){
+       var bt= prompt("Nhap bieu thuc [12+4-6*4] (Number):","12+14-6*4");
+       if(bt!= null){
+           if(bt!=isNaN(bt)){
+            var kq=eval(bt);
+           document.getElementById("ketqua1").innerHTML=kq;   
+           }
+       }
+       else{
+           document.getElementById("ketqua1").innerHTML="Nothing to do !!!"
+       }
+    }
+    </script>
+    

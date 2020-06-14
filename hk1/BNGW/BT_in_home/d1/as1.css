@@ -1,0 +1,27 @@
+img{
+    position:fixed;
+    width:100%;
+    height:100%;
+} 
+ div{
+     background-size: 100%;
+     height: 27em;
+     position:relative;
+     left:10% ;
+     max-width: 80%;
+     border:whitesmoke solid thin;
+     background-color:white  ;
+     color: black;
+     font-size: 29px ;
+     padding:0px 20px;
+     box-shadow:10px 10px 20px black ;
+  
+ }
+ h1{
+     border: midnightblue solid thin;
+     padding: 20px;
+     border-radius: 50px;
+    background-image: url(image/lighthouselogo.jpg);
+    background-repeat:no-repeat;
+    background-size:150%;
+ }

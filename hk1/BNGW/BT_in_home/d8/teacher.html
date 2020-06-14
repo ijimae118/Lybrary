@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .main{
+            width: 80%;
+            margin: auto;
+            padding: 10px;
+            border: blue medium solid;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header{
+            font-size: 5em;
+            font-weight: bolder;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            display: inline-block;
+            width: 18%;
+            text-align: center;
+           /* border: solid;*/
+        }
+        nav{
+            border-top:red medium inset;
+            border-bottom: brown medium inset;
+            line-height: 2em;
+        }
+        footer{
+            text-align: center;
+            font-style: italic;
+            clear: both;
+        }
+        label{
+            display: inline-block;
+            width: 250px;
+            
+        }
+        section{
+            width: 50%;
+            margin: auto;
+            border:red medium solid;
+            padding-left: 50px;
+            margin-top: 20px;
+        }
+        input:required{
+            border: red solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <header>Online shopee</header>
+        <nav>
+            <a href="figure1.html">Home</a>
+            <a href="">Product</a>
+            <a href="">Shop</a>
+            <a href="teacher.html">Register</a>
+            <a href="">Sign in</a>
+        </nav>
+        <section>
+           <h2 style="text-align: center;">Member information</h2>
+           <form action="" id="formDK" name="formDK">
+               <label for="">Fullname</label>
+               <input type="text" name="txtName" id="txtName" required value="le minh"><br><br>
+               <label for="">Gender</label>
+               <input type="radio" name="rdGender" id="rdMale" checked>Male;
+               <input type="radio" name="rdGender" id="rdFemale">Female;<br><br>
+               <label for="">Hobbies</label>
+               <input type="checkbox" name="ckHob" id="ckShop" value="Shopping" checked>Shopping
+
+               <input type="checkbox" name="ckHob" id="ckEat" value="Eating out" checked>Eating out
+
+               <input type="checkbox" name="ckHob" id="ckSport" value="Sporting" checked>Sporting <br><br>
+
+               <label for="">Date of birth</label>
+               <input type="date" name="txtBD" id="txtBD" value="2000-12-25"> <br><br>
+                <label for="">Address</label>
+                <input type="text" name="txtAdd" id="txtAdd" required value="long AN"><br><br>
+                <label for="">Email</label>
+                <input type="email" name="txtMail" id="txtMail" required pattern="^[a-zA-Z0-9]{3,}@[a-zA-Z0-9]{2,5}\.[a-zA-Z0-9]{2,4}$" value="123@gmail.com"><br><br>
+                <label for="">Phone number</label>
+                <input type="text" name="txtPhone" id="txtPhone" required pattern="^[0-9]{3,12}$" value="12345"><br><br>
+                <label for="">City</label>
+                <select name="cbCity" id="cbCity">
+               <option value="" style="display:none;">---Select---</option>  
+                    <option value="SG">Sai Gon</option>
+                    <option value="Hue">Hue</option>
+                    <option value="HN">Ha Noi</option>
+                    <option value="DN">Da Nang</option>
+              
+                   <optgroup label="slect">
+                       <option value="1">1</option>
+                   </optgroup>
+                </select><br><br>
+                <label for="">Comment</label>
+                <textarea name="txtNote" id="txtNote" cols="30" rows="10"></textarea><br><br>
+            <p style="text-align: center;">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </p>
+
+
+
+           </form>
+        </section>
+        <footer>
+            Shopee Copyright 2017.All rights reserved.
+        </footer>
+    </div>
+</body>
+<script>
+    document.getElementById("formDK").onsubmit=function(){
+        var sn = document.getElementById("txtBD").value;
+        var dateNS = new Date(sn);
+        var namsinh = dateNS.getFullYear();
+        var today = new Date();
+        var namnay = today.getFullYear();
+        var tuoi = namnay - namsinh;
+        if (tuoi < 17) {
+            alert("Chua du 17 tuoi!!!!!");
+            return false;
+        }
+        alert(tuoi);
+     
+    var ten=document.getElementById("txtName").value.trim();
+    //==true co cung dc ,ko co cung dc.
+    var gt=document.getElementById("rdMale").checked==true?"nam":"nu";
+   
+    var st=[];
+    if(document.getElementById("ckShop").checked){
+        st.push(document.getElementById("ckShop").value);
+    }
+    if(document.getElementById("ckEat").checked){
+        st.push(document.getElementById("ckEat").value);
+    }
+    if(document.getElementById("ckSport").checked){
+        st.push(document.getElementById("ckSport").value);
+    }
+/* 
+var checkbox = document.getElementsByName("ckHob");
+        var st ="";
+
+        for(var i = 0; i<checkbox.length;i++){
+            if(checkbox[i].checked == true){
+            st += "[" +checkbox[i].value + "]" ;
+            }
+        }
+*/ 
+    var sn=document.getElementById("txtBD").value;
+    var dc=document.getElementById("txtAdd").value;
+    var email=document.getElementById("txtMail").value;
+    var dt=document.getElementById("txtPhone").value;
+    var tp=document.getElementById("cbCity").value;
+    var gc=document.getElementById("txtNote").value;
+     // dung alert kiem tra trc coi phan tren co sai ko
+    alert();
+    // in ra 
+    var a=[];
+        a.push("Member Information");
+        a.push("-------------------");
+        a.push("Name:" + ten);
+        a.push("Gender:" + gt);
+        a.push("Hobbies:" + st.join(", "));// chỉ dùng cho mãng hobbies để in ra
+//      a.push("Hobbies:" + st); chỉ dùng cho for(hobbies) để in ra
+        a.push("Birth Day:" + sn);
+        a.push("Address:" + dc);
+        a.push("Email:" + email);
+        a.push("Phone Number:" + dt);
+        a.push("City:" + tp)
+        a.push("Comment:" + gc);
+
+        alert(a.join("\n"));
+     return false;
+    
+} 
+</script>
+</html>

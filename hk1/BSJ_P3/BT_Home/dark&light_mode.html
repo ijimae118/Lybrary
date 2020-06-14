@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+  
+  </script>
+  <style>
+    /* style body*/
+    pre {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: white;
+      font-weight: bold;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    /*style header*/
+
+    input[type="text"]
+    {
+      border: cyan solid;
+      margin: auto;
+    }
+    /*social_icon footer*/
+  .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+.fa-android {
+  background: #a4c639;
+  color: white;
+}
+
+.fa-dribbble {
+  background: #ea4c89;
+  color: white;
+}
+
+.fa-vimeo {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+}
+
+.fa-vine {
+  background: #00b489;
+  color: white;
+}
+
+.fa-foursquare {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-stumbleupon {
+  background: #eb4924;
+  color: white;
+}
+
+.fa-flickr {
+  background: #f40083;
+  color: white;
+}
+
+.fa-yahoo {
+  background: #430297;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #ff5500;
+  color: white;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}
+  </style>
+</head>
+
+<body style="background-color:#fcfff5;">
+  <!--Header-->
+  <div class="container-fluid header">
+
+    <div class="row">
+      <div class="col-sm-2 img1"><a href="Home.html"><img src="images/Capture2.PNG" width="100%" alt=""></a></div>
+      <div class="col-sm-10 img2">
+        <!--search header-->
+          <div class="input-group" style="margin: 50px;">
+                <input type="text" class="form-control" placeholder="Search_Me" name="search">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+              </div>
+          </div>
+        <!--navbar header-->
+          <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="Home.html" style="font-size: xx-large; font-weight: bolder;">JODAN</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <i class="navbar-brand">Event Management Services </i>
+                  <ul class="nav navbar-nav">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                      <li><a href="SignUp.html"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                    <li><a href="LogIn.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+
+      </div>
+   
+    </div>
+
+  </div>
+<!--Body phần cần edit:có thể xóa-->
+<div class="body">
+  <style>
+*,
+*:before,
+*:after {
+ box-sizing:border-box
+}
+::-webkit-scrollbar {
+ -webkit-appearance:none;
+ height:5px;
+ width:10px
+}
+::-webkit-scrollbar-thumb {
+ background-color:#c4c4c4
+}
+::-webkit-scrollbar-track {
+ background-color:#eee
+}
+html,
+body {
+ margin:0;
+ padding:0;
+ font-family:-apple-system,".sfnstext-regular",san francisco,roboto,segoe ui,helvetica neue,lucida grande,Arial,sans-serif;
+ background:0 0;
+ font-size:22px;
+ line-height:1.7;
+ color:rgba(0,0,0,.7);
+ font-weight:400;
+ -moz-font-feature-settings:"kern" 1;
+ -ms-font-feature-settings:"kern" 1;
+ -o-font-feature-settings:"kern" 1;
+ -webkit-font-feature-settings:"kern" 1;
+ font-feature-settings:"kern" 1;
+ text-rendering:optimizeLegibility;
+ overflow-x:hidden
+}
+@media screen and (max-width:600px) {
+ html,
+ body {
+  font-size:18px
+ }
+}
+strong,
+b {
+ color:rgba(26,26,26,.7)
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ font-family:-apple-system,".sfnstext-regular",san francisco,roboto,segoe ui,helvetica neue,lucida grande,Arial,sans-serif;
+ font-weight:700
+}
+a {
+ color:#00953e;
+ text-decoration:none;
+ transition:.2s ease-in
+}
+a:hover {
+ color:rgba(0,0,0,.7)
+}
+code,
+pre {
+ white-space:pre-wrap;
+ white-space:-moz-pre-wrap;
+ white-space:-pre-wrap;
+ white-space:-o-pre-wrap;
+ word-wrap:break-word
+}
+pre {
+ border:1px solid #e8e8e8;
+ padding-left:1em;
+ border-radius:4px
+}
+pre code {
+ font-size:15px
+}
+img {
+ max-width:100%
+}
+figure {
+ max-width:100%
+}
+.btn {
+ display:inline-block;
+ padding:5px 25px;
+ color:#fff;
+ background-color:#00953e;
+ border-radius:2px;
+ text-decoration:none;
+ border:none
+}
+.btn:hover,
+.btn:focus {
+ text-decoration:none;
+ border:none;
+ color:#fff;
+ background-color:#00c853
+}
+.btn:after {
+ content:" "!important
+}
+.btn strong {
+ color:#fff
+}
+@media screen and (max-width:600px) {
+ .btn {
+  padding:5px 10px
+ }
+}
+a {
+ text-decoration:none
+}
+a:hover {
+ text-decoration:none
+}
+p a {
+ color:rgba(0,0,0,.7);
+ text-decoration:none;
+ border-bottom:2px solid #62ffa3;
+ padding-bottom:4px;
+/* -webkit-transition:.4s ease;
+ -moz-transition:.4s ease
+*/
+}
+p a:hover {
+ border-bottom:2px solid #00c853
+}
+.demo-container {
+ max-width:1000px;
+ margin:0 auto
+}
+@media screen and (max-width:600px) {
+ .demo-container {
+  padding:0 15px
+ }
+}
+.demo-container .btn {
+ margin-bottom:2em
+}
+
+  </style>
+  <div class="dark-div" id="dark-div-2" style="background-color: rgb(255, 255, 255); color: rgb(51, 51, 51);" onclick="darker()">
+    <button class="btn btn-info" style="width: 200px;float: right;">Switch</button>
+    </div>
+  <div>
+    osakdjlsakdjlaskjdlksjlkdjslkjdlksjdlkajsalkdjlaskjdlksjdlkjsaldkjlskjdlaksjldkjslkdjlksjdlksjldkjsldjlskjdlksjdlkjasldkjsldjlsjdlsjldjsldjlksjdlkjsldkjasldjlsjdlsjdljasldjlsj Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, quod placeat temporibus nihil ullam quo officia eius tempora ducimus eaque iusto molestiae nemo sit odit excepturi aspernatur delectus tempore est.
+  </div>
+    <script>
+  /*  function dark() {
+        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+                document.body.style.backgroundColor = '#333';
+        }
+        else {
+                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+        }
+    }
+  */
+  document.body.style.backgroundColor = sessionStorage.getItem('bg');
+document.body.style.color = sessionStorage.getItem('cc');
+function darker() {
+     if ( sessionStorage.getItem('bg') === 'rgb(255, 255, 255)') {
+
+            sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
+    //        sessionStorage.setItem('cc', '#777');
+
+
+     }
+    else if (sessionStorage.getItem('bg') == null || undefined) {
+        sessionStorage.setItem('bg', 'rgb(6, 23, 37)');
+        sessionStorage.setItem('cc', '#777');
+
+    }
+    else if( sessionStorage.getItem('bg') === 'rgb(6, 23, 37)') {
+
+        sessionStorage.setItem('bg', 'rgb(255, 255, 255)');
+        sessionStorage.setItem('cc', '#333');
+
+
+    }
+
+document.body.style.backgroundColor = sessionStorage.getItem('bg');
+document.body.style.color = sessionStorage.getItem('cc');
+
+}
+
+    </script> 
+</div>
+ 
+<!--footer-->
+<div class="footer text-center  navbar navbar-bottom" style="background-color:rgb(74, 253, 253);">
+  <div class="row">
+     <div class="col-sm-3">
+    <strong>Viet Nam</strong>
+      <p> 
+        floor 4, Centec Tower <br>
+        72 - 74 Nguyễn Thị Minh Khai,Distric 3<br>
+        Hồ Chí Minh City<br>
+        +84 901 332 552<br>
+        +84 28 666 07 555<br>
+        +84 28 629 99 198
+      </p>
+     </div>
+    <div class="col-sm-3">
+    <strong>Hoa Kỳ</strong><br><br>
+      <p>
+        15718 Cascade Point Drive <br>
+        Houston <br>
+        Texas 77084<br>
+        +1(832)436-5058
+      </p>
+    </div>
+     <div class="col-sm-6">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-pinterest"></a>
+        <a href="#" class="fa fa-snapchat-ghost"></a>
+        <a href="#" class="fa fa-skype"></a>
+        <a href="#" class="fa fa-android"></a>
+        <a href="#" class="fa fa-dribbble"></a>
+        <a href="#" class="fa fa-vimeo"></a>
+        <a href="#" class="fa fa-tumblr"></a>
+        <a href="#" class="fa fa-vine"></a>
+        <a href="#" class="fa fa-foursquare"></a>
+        <a href="#" class="fa fa-stumbleupon"></a>
+        <a href="#" class="fa fa-flickr"></a>
+        <a href="#" class="fa fa-yahoo"></a>
+        <a href="#" class="fa fa-reddit"></a>
+        <a href="#" class="fa fa-rss"></a>
+     </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            font-size:18.1px;
+        }
+        h1{
+            text-align: center;
+            color: blue;
+            font-size: xx-large;
+        }
+        h3{
+            color: blue;
+            font-size: x-large;
+        }
+       #main{
+           font-family: 'Times New Roman', Times, serif;
+           font-weight:bolder;
+           font-size: large;
+           text-align:center;
+         
+       }
+       span{
+           color: red;
+       }
+       label{
+           display: inline-block;
+           width: 150px;
+           margin: 0px 10px;
+           line-height: 40px;
+           text-align:right;
+       }
+       
+    </style>
+</head>
+<body>
+    <h1>REGISTRATION FORM</h1>
+    <h3>Notes:</h3>
+    <ol>
+        <li>Fields with (<span>*</span>) mark must be entered</li>
+        <li>Login name have no spaces</li>
+    </ol>
+    <section id="main">
+    <form action="" method="get" id="form" name="form">
+    <label for="">Login name<span>*</span> </label>
+    <input type="text" name="txtLN" id="txtLN" placeholder=" Enter Name" autofocus required><br>
+
+    <label for="">Password<span>*</span></label>
+    <input type="password" name="txtP" id="txtP" placeholder=" Enter Password" required><br>
+
+    <label for="">Password confirm<span>*</span></label>
+    <input type="password" name="txtPC" id="txtPC" placeholder=" Enter Password Confirm" required><br>
+
+    <label for="">Full name<span>*</span></label>
+    <input type="text" name="txtFN" id="txtFN" placeholder=" Enter Full Name" required><br>
+    
+    <label for="">Address<span>*</span></label>
+    <input type="text" name="txtA" id="txtA" placeholder=" Enter Address" required><br>
+    
+    <label for="">Email<span>*</span></label>
+    <input type="email" name="txtE" id="txtE" placeholder=" Enter Email" required pattern="^[a-zA-Z0-9]{3,}@[a-zA-Z0-9]{3,}\.[a-zA-Z]{2,3}$"><br>
+    
+    <label for="">Sex</label>
+    <input type="radio" name="1" id="rdMale" checked >Male
+    <input type="radio" name="1" id="rdFemail" 
+    >Female <br>
+    
+    <label for="">Date of birth</label>
+     <input type="date" name="txtDOB" id="txtDOB" value="1989-01-01"><br>
+    
+     <label for="">Country</label>
+                <select name="cbLoc" id="cbLoc">
+                    <option value="SG">Ho Chi Minh city</option>
+                    <option value="HU">Hue</option>
+                    <option value="HN">Hanoi</option>
+                    <option value="DN">Danang</option>
+                    <option value="CT">Cantho</option>
+                </select><br>
+
+    <label for="">Phone number</label>
+    <input type="tel" name="txtPN" id="txtPN" pattern="^\d{3,}$"><br>
+
+    <label for="">Hobbies</label>
+    <input type="checkbox" name="2" id="HBSW" >Swimming
+    <input type="checkbox" name="2" id="HBD" 
+    >Dancing
+    <input type="checkbox" name="2" id="HBS" 
+    >Shopping <br>
+
+    <label class="textarea" for="">Comment</label>
+    <textarea  name="" id="" cols="20" rows="0"></textarea><br><br>
+
+     <input type="submit" value="Submit" id="" name="">
+     <input type="reset" value="Reset" id="" name="">
+    </form>
+    </section>
+</body>
+<script>
+    document.getElementById("form").onsubmit=function(){
+        // trim() để bỏ ... dư  sau chữ
+
+       var name=document.getElementById("txtLN").value.trim();
+        if(name.length<5){
+            alert(" login name phai co it nhat 5 ky tu!");
+            return false;
+        }
+        alert("1");
+     /*  
+       var r=/^[a-z0-9]{5,}$/ig;
+       if(r.test(name)==false){
+           alert("Ten dang nhap ko hop le!");
+          return false; 
+       }
+*/
+       var password=document.getElementById("txtP").value.trim();
+       var r=/^\d{5,}$/;
+       if(r.test(password)==false){
+           alert("Mat khau khong hop le!");
+           return false;
+       } alert("2");
+ /*      if(password.length<5){
+            alert(" login phai co it nhat 5 ky tu!");
+            return false;
+        }
+*/
+// vì dù là nhập so hay là chuổi thì nó củng xem la chuổi
+       var passconfirm=document.getElementById("txtPC").value.trim();
+       if(password!=passconfirm){
+        alert("Password should be same as Password Confirm.");
+            return false;
+       }
+
+       alert("3");
+
+       
+
+
+    }
+</script>
+
+</html>

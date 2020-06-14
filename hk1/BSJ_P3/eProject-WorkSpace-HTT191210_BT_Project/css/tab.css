@@ -1,0 +1,161 @@
+body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    background-color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+  
+  .navbar-brand.navbar-center {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translatex(-50%);
+    /*margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;*/
+  }
+  .navbar-brand{
+    margin: 0;
+    padding: 0;
+  }
+  .nav.navbar-nav.navbar-midRight{
+    position: absolute;
+    left: 15%;
+    top: 20%;
+    transform: translatex(-50%);
+  }
+
+  .nav.navbar-nav.navbar-midLeft{
+    position: absolute;
+    left: 85%;
+    top: 20%;
+    transform: translatex(-50%);
+  }
+
+  /*Started  Services*/
+  /*Style Body tab services*/
+  a:hover{
+      text-decoration: none;
+  }
+  /*Button tab services*/
+  tr>td>button>a>div{
+    margin: 10px 10px;
+    text-align: center;
+    color:red;
+    width:100%;
+    height: 100%;
+    font-size: xx-large;
+    position:relative;
+    animation: ddd 1.5s linear 1s infinite alternate forwards ;
+  }
+  @keyframes ddd{
+            0%{ background-color: yellow;top: 0;left: 0;}
+            25%{ background-color: tomato;top:0; left: 5px;}
+            50%{background-color: brown;left:5px; top:5px;}
+            75%{background-color: blue;top:5px;left: 0;}
+            100%{background-color:greenyellow;left: 0; top: 0px;}
+        }
+  /*Style body icon back tab services1,2,3,all*/
+  #a:hover{
+    width:9%;
+  }
+
+  /*img tab all services*/
+  #li>a:hover,#li>a>img:hover{
+    width: 100%;
+    height: 100%;
+    color: tomato;
+    font-size: xx-large;
+  }
+  #li>a>img{
+    border-radius:50%;
+  }
+  
+  /*Started  Contact*/
+  /*lam hien chu phan body*/
+section{
+  color: black;
+  font-size: larger;
+  font-weight: bold;
+}
+/*style form*/
+input[type=text], select, textarea {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: vertical;
+}
+label{
+display: inline-block;
+width: 15%;
+}
+input[type=email],input[type=tel]{
+width: 70%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: vertical;
+}
+input[type=date]{
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 6px;
+margin-bottom: 16px;
+resize: vertical;
+}
+
+input[type=submit] {
+background-color: #4CAF50;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+input[type=submit]:hover {
+background-color: #45a049;
+}

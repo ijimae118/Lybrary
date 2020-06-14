@@ -1,0 +1,87 @@
+a{
+    color: rgb(85, 85, 85);
+}
+.navbar {
+    margin: 5px;
+    border-top: 1px solid rgb(156, 156, 156); 
+    border-bottom: 1px solid rgb(156, 156, 156); 
+    clear: both;
+}
+
+nav .navbar-nav ul  li  {
+    list-style-type: none;
+    padding: 50px;
+    
+}
+
+ .dropdown-menu {
+    display: none;
+    position: absolute;
+}
+.container .header-top .logo img {
+    width: 25%;
+    float: left;
+    padding: 5px;
+    margin-left: 420px;
+}
+.dropdown .dropdown-menu a:hover{
+    background: rgb(231, 228, 228);
+}
+.dropdown .dropdown-menu a{
+    line-height: 30px;
+
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    box-shadow: none;
+}
+
+.nav li {
+    letter-spacing: 2px;
+    padding: 1px 20px 0px 55px;
+}
+.nav .dropdown li {
+    padding: 0;
+    
+}
+.navbar-nav>li>a{
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.navbar-nav>li> .dropdown-menu {
+    margin-left: 56px;
+}
+nav ul li a {
+
+    color: rgb(85, 85, 85);
+    text-decoration: none;
+    font-weight: 550;
+     
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    background: rgb(255, 254, 251);
+    color: rgb(105, 85, 59);
+}
+
+/* header */ 
+
+.header-top .btn-default:hover {
+    background: none;
+}
+
+.header-top .btn-default i:hover {
+    color: rgb(70, 70, 172);
+}
+.header-top .btn-default i {
+    color: rgb(107, 97, 97);
+}
+.search .form-group {
+    margin: 15px 0px 0px 760px;
+}
+.search .form-group a{
+    color: rgb(85, 85, 85);
+}
+
+.search .form-group  a:focus, a:hover {
+    text-decoration: none;
+}

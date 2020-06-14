@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sign-up</title>
+    <style>
+        #main {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 80%;
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .intro {
+            width: 80%;
+            max-width: auto;
+        }
+
+        table {
+            width: 50%;
+            margin: auto;
+            font-size: 1.3em;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        label{
+            display: inline-block;
+            width: 150px;
+            line-height: 30px;
+            text-align: left;
+        }
+
+        input:required{
+            border-color: green ;
+        }
+        input:invalid{
+            background-color: yellow;
+        }
+
+        input[type='text'],
+        input[type='password'],
+        input[type='email'],
+        input[type='date'],
+        input[type='range'],
+        select
+        {
+            width: 200px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <header>
+            <h2>New Year's</h2>
+        </header>
+        <nav>
+            <table>
+                <tr>
+                    <td> <a href="#">Home</a> </td>
+                    <td> <a href="d05_table_image.html">Galary</a> </td>
+                    <td> <a href="#">Events</a> </td>
+                    <td> <a href="#">Contact</a> </td>
+                    <td></td>
+                </tr>
+            </table>
+        </nav>
+        <section>
+            <h2>Sign up</h2>
+
+            <form action="d05_table_menu.html" method="GET">
+                <label for="">Username </label>
+                <input type="text" name="txtID" id="txtID" 
+                placeholder="nhap tai khoan" 
+                autofocus required >  <br> 
+
+                <label for="">Password</label>
+                <input type="password" name="txtPass" id="txtPass" 
+                pattern="^\d{3}$"
+                placeholder="nhap mat ma"
+                required > <br> 
+ 
+                <label for="">Email</label>
+                <input type="email" name="txtMail" id="txtMail" placeholder="nhap email"> <br>
+
+                <label for="">Gender</label>
+                Male <input type="radio" name="rdGender" id="rdMale" checked value="male">
+                Female <input type="radio" name="rdGender" id="rdFemale" value="female"> <br>   
+                
+                <label for="">Location</label>
+                <select name="cbLoc" id="cbLoc">
+                    <option value="SG">Saigon</option>
+                    <option value="HU">Hue</option>
+                    <option value="HN">Hanoi</option>
+                    <option value="DN">Danang</option>
+                    <option value="CT">Cantho</option>
+                </select>  <br>
+
+                <label for="">Birthday</label>
+                <input type="date" name="txtBD" id="txtBD" 
+                value="2000-05-15"> <br>
+
+                <label for="">Rating</label>
+                <input type="range" name="txtRate" id="txtRate" min='1' max="5" value="4" required>
+
+
+
+
+
+
+
+<br><br>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+
+        </section>
+        <footer>
+            Copyright by &copy; LeMinh, Nov-2019 - Saigon, Vietnam.
+        </footer>
+    </div>
+</body>
+
+</html>

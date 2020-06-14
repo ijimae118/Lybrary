@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            
+            #main{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                width: 80%;
+                margin: auto;
+               
+                text-align: center;
+            }
+            .intro{
+                width: 80%;
+                max-width: auto;
+            }
+            table{
+                width: 50%;
+                margin: auto;
+                font-size: 1.3em;
+            }
+            a{
+                text-decoration: none;
+                font-size: bold;
+            }
+            label{
+                display: inline-block;
+                width: 150px;
+                line-height: 30px;
+            }
+            input:required{
+                background-color: green;
+             }
+            input:invalid{
+                background-color: yellow;
+            }
+        </style>
+</head>
+<body>
+        <div id="main">
+                <head>
+                    <h2>New Year's</h2>
+                </head>
+                <nav>
+                    <table>
+                        <tr>
+                            <td><a href="#">Home</a></td>
+                            <td><a href="d05_table_image.html">Galary</a></td>
+                            <td><a href="#">Event</a></td>
+                            <td><a href="#">Contact</a></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </nav>
+                <section>
+                    <h2>Login</h2>
+                  <form action="d05_table_menu.html" method="POST">
+                    <label for="">Username</label>
+                    <input type="text" name="txtID" id="txtID" pattern="aptech" placeholder="Nhap tai khoan" autofocus><br><br>
+
+                    <label for="">Password</label>
+                    <input type="password" name="txtPass" id="txtPass" pattern="^\d{3}$" placeholder="nhap mat ma"><br><br>
+
+                      <input type="submit" value="Submit">
+                      <input type="reset" value="Reset">
+                  </form>
+                </section>
+                <footer>
+                    Copyright by &copy; LeMinh ,Nov-2019,SaiGon,VietNam .
+                </footer>
+        </div>
+</body>
+</html>

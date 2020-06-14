@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/11144dca42.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="content">
+        <div class="container">
+            <div class="row margin-row">
+                <div class="col-xs-6 col-sm-3 image_container"><a title="1" href="#content"><img class="img_thumbnail img-responsive" src="images/Capture1.PNG"><div class="after"><i class="glyphicon glyphicon-plus"></i></div></a></div>
+                <div class="col-xs-6 col-sm-3 image_container"><a title="2" href="#content"><img class="img_thumbnail img-responsive" src="images/pic_2.jpg"><div class="after"><i class="glyphicon glyphicon-plus"></i></div></a></div>
+                <div class="col-xs-6 col-sm-3 image_container"><a title="3" href="#content"><img class="img_thumbnail img-responsive" src="images/pic_3.jpg"><div class="after"><i class="glyphicon glyphicon-plus"></i></div></a></div> 
+                <div class="col-xs-6 col-sm-3 image_container"><a title="4" href="#content"><img class="img_thumbnail img-responsive" src="images/pic_4.jpg"><div class="after"><i class="glyphicon glyphicon-plus"></i></div></a></div>
+                <div class="col-xs-6 col-sm-3 image_container"><a title="5" href="#content"><img class="img_thumbnail img-responsive" src="images/pic_1.jpg"><div class="after"><i class="glyphicon glyphicon-plus"></i></div></a></div>
+                <div class="col-xs-6 col-sm-3 image_container"><a title="6" href="#content"><img class="img_thumbnail img-responsive" src="images/pic_2.jpg"><div class="after"><i class="glyphicon glyphicon-plus"></i></div></a></div>
+                <div class="col-xs-6 col-sm-3 image_container"><a title="7" href="#content"><img class="img_thumbnail img-responsive" src="images/pic_3.jpg"><div class="after"><i class="glyphicon glyphicon-plus"></i></div></a></div>
+                <div class="col-xs-6 col-sm-3 image_container"><a title="8" href="#content"><img class="img_thumbnail img-responsive" src="images/pic_4.jpg"><div class="after"><i class="glyphicon glyphicon-plus"></i></div></a></div>
+            </div>
+        </div>
+    <div tabindex="-1" class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal">×</button>
+                    <h3 class="modal-title">Heading</h3>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>      
+<script>
+    $('.img_thumbnail, .after').click(function(){
+     $('.modal-body').empty();
+     var title = $(this).parent('a').attr("title");
+     $('.modal-title').html(title);
+     $($(this).parents('div').html()).appendTo('.modal-body');
+     $('#myModal').modal({show:true});
+});
+</script>
+</body>
+</html>

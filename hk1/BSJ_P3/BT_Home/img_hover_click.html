@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+  <div class="container my-4">
+
+    <p class="font-weight-bold">This simple example shows how to place an image within a bootstrap popover. You can
+      define if you want to launch the popover on hover or on click.</p>
+
+    <p><strong>Detailed documentation and more examples of Bootstrap grid you can find in our <a href="https://mdbootstrap.com/docs/jquery/javascript/popovers/"
+          target="_blank">Bootstrap Popovers Docs</a>.</p>
+
+    <a class="btn btn-primary"  data-toggle="popover-hover" data-img="images/win.jpg"><img src="images/win.jpg" alt=""width="250px"></a>
+    <a class="btn btn-indigo" data-toggle="popover-click" data-img="https://mdbootstrap.com/img/Others/documentation/img%20(30)-mini.jpg">Click
+      me</a>
+    <a class="btn btn-dark-green" data-toggle="popover-hover" data-img="//placehold.it/100x50">Hover over me</a>
+    <a class="btn btn-purple" data-toggle="popover-click" data-img="//placehold.it/50x50">Click me</a>
+
+  </div>
+</body>
+<script>
+    // popovers initialization - on hover
+    $('[data-toggle="popover-hover"]').popover({
+      html: true,
+      trigger: 'hover',
+      placement: 'bottom',
+      title:"oh shit",
+      
+      content: function () { return '<img width="1000px" src="' + $(this).data('img')  + '" />'; }
+    });
+
+    // popovers initialization - on click
+    $('[data-toggle="popover-click"]').popover({
+      html: true,
+      trigger: 'click',
+      placement: 'bottom',
+      content: function () { return '<img src="' + $(this).data('img') + '" />'; }
+    });
+</script>
+
+</html>

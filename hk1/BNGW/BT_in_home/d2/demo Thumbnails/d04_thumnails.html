@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thumnails Demo</title>
+<style>
+
+#ga{
+    position: relative;
+}
+
+#ga ul{
+    list-style-type: none;
+    width: 300px;
+}
+
+#ga span{
+    display: none;
+    position: absolute;
+    top:10px;
+    left: 400px;
+}
+
+#ga li{
+    display: inline;
+    padding: 10px;
+    float: left;
+    border: lightgreen solid;
+}
+
+
+#ga li:hover span{
+    display: block;
+
+}
+
+</style>
+
+
+</head>
+
+<body>
+    <h2>Image Gallery</h2>
+    <hr>
+    <div id="ga">
+        <ul>
+            <li>
+                <a href="images/photo1.jpg">
+                    <img src="images/photo1thumb.jpg" alt="">
+                    <span>
+                        <img src="images/photo1.jpg" alt="">
+                        <br>
+                        Golden Gate Bridge
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="images/photo2.jpg">
+                    <img src="images/photo2thumb.jpg" alt="">
+                    <span>
+                        <img src="images/photo2.jpg" alt="">
+                        <br>
+                        California Beach
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="images/photo3.jpg">
+                    <img src="images/photo3thumb.jpg" alt="">
+                    <span>
+                        <img src="images/photo3.jpg" alt="">
+                        <br>
+                        Rocky Shoreline
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="images/photo4.jpg">
+                    <img src="images/photo4thumb.jpg" alt="">
+                    <span>
+                        <img src="images/photo4.jpg" alt="">
+                        <br>
+                        Pacific Sunset
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

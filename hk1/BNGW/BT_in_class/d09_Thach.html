@@ -1,0 +1,54 @@
+<body style="color: crimson;">
+        <h2> Function DEMO-May tinh tien ban hang</h2>
+        <hr style="text; color: red">
+        <hr>
+        <form action="" method="get" id="formHD" name="formHD">
+            <h1 style=" color: #fff000;">Hoa don mua hang sang pham</h1>
+            <label for="">San pham</label>
+            <select id="cbSP" name="cbSP">
+                <option value="10">Coca cola</option>
+                <option value="15">Chocolate</option>
+                <option value="30">Cake</option>
+                <option value="8">7up</option>
+                <option value="9">Snack</option>
+            </select> <br><br>
+            <label for="">Don gia:</label>
+            <input type="text" name="txtDG" id="txtDG" readonly>
+            <br><br>
+            <label for="">so luong:</label>
+            <input type="number" name="txtSL" id="txtSL" value="1" min="1" max="200" required>
+            <br><br>
+            <label for="">Thanh tien</label>
+            <input type="text" name="txtTT" id="txtTT" readonly>
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+    
+        </form>
+    </body>
+    <script>
+    
+        function tinhTien() {
+            //lay don gia san pham
+            var dg = document.getElementById("txtDG").value;//dang chuoi ky tu
+            var sl = document.getElementById("txtSL").value;
+            dg = parseInt(dg);//doi chuoi ra so nguyen thi moi nhan voi don gia duoc
+            sl = parseInt(sl);
+            //thanh tien khi mua san pham
+            var tt = dg * sl;
+            document.getElementById("txtTT").value = tt;
+    
+        }
+        //lap trinh cho su kien onchange tren form hoa don
+        document.getElementById("formHD").onchange = function () {
+            var dg = document.getElementById("cbSP").value;
+            document.getElementById("txtDG").value = dg;
+            
+            tinhTien();
+        }
+        window.onload = function () {
+            var dg = document.getElementById("cbSP").value;
+            document.getElementById("txtDG").value = dg;
+            tinhTien();
+        }
+    </script>
