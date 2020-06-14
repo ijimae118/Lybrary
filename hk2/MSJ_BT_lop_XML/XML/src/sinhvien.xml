@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ho so sinhvien ,bao gom cac sinh vien:
+maso, ten,gioi tinh, dia chia , diem
+-->
+<Hososinhvien>
+    <sinhvien id="s01">
+        <hoten>Quach Gia Lam</hoten>
+        <gioitinh>nam</gioitinh>
+        <diachi>TP HCM</diachi>
+        <diem>80</diem>
+    </sinhvien>
+    <sinhvien id="s02">
+        <hoten>Chau Nhuan Phat</hoten>
+        <gioitinh>nam</gioitinh>
+        <diachi>Binh Duong</diachi>
+        <diem>70</diem>
+    </sinhvien>
+    <sinhvien id="s03">
+        <hoten>Lê Minh</hoten>
+        <gioitinh>nam</gioitinh>
+        <diachi>Lai Chau</diachi>
+        <diem>80</diem>
+    </sinhvien>
+    <sinhvien id="s04">
+        <hoten>Toan Thang</hoten>
+        <gioitinh>nam </gioitinh>
+        <diachi>lao</diachi>
+        <diem>76</diem>
+    </sinhvien>
+</Hososinhvien>
+<!--Well From-->
+<!--check XML dc qua trinh duyet-->
+<!--validate XML ko dc if ko co cau truc khai bao-->

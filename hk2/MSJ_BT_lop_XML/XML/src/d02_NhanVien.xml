@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To ho nhan vien,dua theo cau truc mo ta d02_nhanvien.dtd
+Bo phan:Ke Toan ,Quan tri ,San Xuat ,Van phong
+-->
+
+<!DOCTYPE HoSoNhanVien SYSTEM 'd02_Nhanvien.dtd'[
+    <!ENTITY KT "Ke Toan">
+    <!ENTITY VP "Van Phong">
+    <!ENTITY SX "San Xuat">
+    <!ENTITY QT "Quan Tri - Nhan Su">
+]>
+<HoSoNhanVien>
+    <NhanVien MaSo="NV1" GioiTinh="Nam">
+        <Ten>Nguyen Ngoc Thach</Ten>
+        <ChucVu>Giam Doc</ChucVu>
+        <Luong>1</Luong>
+        <BoPhan>&VP;</BoPhan>
+    </NhanVien>
+    <NhanVien MaSo="NV2" GioiTinh="Nu">
+        <Ten>Dang Tieu Chi</Ten>
+        <ChucVu>Nhan Vien</ChucVu>
+        <Luong>100</Luong>
+        <BoPhan>&QT;</BoPhan>
+    </NhanVien>
+    <NhanVien MaSo="" GioiTinh="">
+        <Ten></Ten>
+        <ChucVu></ChucVu>
+        <Luong></Luong>
+        <BoPhan></BoPhan>        
+    </NhanVien>
+</HoSoNhanVien>
+

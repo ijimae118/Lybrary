@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT delivered-products (delivered-product)*>
+<!ELEMENT delivered-product (invoice,customer,product)>
+
+<!ELEMENT invoice EMPTY>
+<!ATTLIST invoice id CDATA #REQUIRED
+                  date CDATA #REQUIRED
+                  by CDATA #REQUIRED>
+<!ELEMENT customer (name,address)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT product (product-name,quality,price)>
+<!ATTLIST product id CDATA #REQUIRED>
+<!ELEMENT product-name (#PCDATA)>
+<!ELEMENT quality (#PCDATA)>
+<!ELEMENT price (#PCDATA)>

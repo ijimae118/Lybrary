@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Assignment 3
+Dịch vụ chuyển bưu phẩm XYZ có các văn phòng chi nhánh trên toàn quốc.
+Mỗi văn phòng lưu trữ một bộ hồ sơ về các bưu phẩm đã nhận và gửi đi trong máy tính dưới dạng XML.
+Tuy nhiên, để ngăn ngừa khả năng dữ liệu không nhất quán do có nhiều người tham gia nhập liệu, cần
+phải chuẩn hóa bộ thẻ mô tả dữ liệu trong hê thống.
+ Hãy viết một DTD cho yêu cầu nêu trên và kiểm tra DTD này bằng 1 hồ sơ XML với các dữ liệu
+không hợp lệ (fake).
+Hướng dẫn:
+- Tạo file DTD mô tả cấu trúc của 1 bảng danh sách các chứng từ về bưu phẩm (courierList)
+- Mỗi bưu phẩm.courier bao gồm :
+o Địa chỉ gởi & nhận bưu phẩm despatch-details, cụ thể :
+▪ Văn phòng chi nhánh nơi gửi (Brfrom), với các thuộc tính :
+• from-region : văn phòng nơi gửi,
+• from-branch : chi nhánh nơi gửi
+▪ Văn phòng chi nhánh nơi nhận (Brto), với các thuộc tính:
+• to-region : văn phòng nơi nhận,
+• to-branch : chi nhánh nơi nhận
+
+o Nội dung chi tiết của từng bưu phẩm courier-details, bao gồm :
+
+• Địa chỉ người gửi (from), người nhận (to), với các thuộc tính address-number,
+street. Lưu ý: nếu là Nhà riêng: không còn thông tin thêm, tuy nhiên nếu là
+buiding phải thêm số tầng, số phòng (building là thẻ trống chỉ có 2 thuộc tính
+building-floor và room-no)
+
+o Thông tin vận chuyển transportation, bao gồm thuộc tính mô tả phương thức vận chuyển bưu
+kiện method (có kiểu ENTITY đã được khai báo) và thông tin ngày gửi (from-date), ngày nhận
+(to-date)
+
+- Yêu cầu khai báo 4 entity đại diện cho các phương tiện vận chuyển : byair, bytrain, byship, bytruck
+-->
+
+
+<!ELEMENT courierList (courier+)>
+<!ELEMENT courier (despatch-details,courier-details,transportation) >
+<!ELEMENT despatch-details (Brfrom,Brto) >
+<!ELEMENT Brfrom (#PCDATA)>
+<!ELEMENT Brto (#PCDATA)>
+<!ATTLIST  Brfrom  from-region CDATA #REQUIRED
+                   from-branch CDATA #REQUIRED>
+<!ATTLIST  Brto to-region CDATA #REQUIRED
+                to-branch CDATA #REQUIRED>
+
+<!ELEMENT courier-details (from,to)>
+<!ELEMENT from (building)>
+<!ELEMENT to (building)>
+<!ELEMENT building (#PCDATA)>
+<!ATTLIST building building-Floor CDATA #IMPLIED
+               room-no CDATA #IMPLIED>
+<!ATTLIST from address-number CDATA #REQUIRED
+               street CDATA #REQUIRED>
+<!ATTLIST to address-number CDATA #REQUIRED
+               street CDATA #REQUIRED>                      
+
+<!ELEMENT transportation EMPTY>
+<!ENTITY air 'byair'> <!--entity de benh xml -->
+<!ENTITY train ' bytrain'>
+<!ENTITY ship 'byship'>
+<!ENTITY truck 'bytruck'>
+<!ATTLIST transportation from-date CDATA #REQUIRED
+                         to-date CDATA #REQUIRED
+                         by CDATA #REQUIRED>

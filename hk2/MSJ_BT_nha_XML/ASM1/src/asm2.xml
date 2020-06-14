@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Assignment 2: Namespace
+- Global Express là nhà cung cấp dịch vụ chuyển phát nhanh bằng đường hàng không
+hàng đầu ở Hoa Kỳ với hệ thống mạng lưới nội địa hoạt động trên 20 khu vực.
+Mỗi văn phòng địa phương của công ty phải quản lý nhiều giấy tờ hồ sơ về các chứng từ
+giao nhận hằng ngày (dễ dàng bị hư hỏng hoặc thất lạc) → công ty quyết định lưu trữ các
+số liệu nói trên vào máy tính và chuyển về văn phòng chính dưới dạng XML.
+- Yêu cầu : Tạo file XML lưu trữ các chứng từ giao nhận, sử dụng namespace để phân biệt
+hồ sơ của từng khu vực khác nhau.
+
+Hướng dẫn:
+- Tạo file XML lưu trữ 1 bảng danh sách các chứng từ vận chuyển (InvoiceList)
+- Mỗi chứng từ được mô tả chi tiết trong thẻ Invoice, và bao gồm các thẻ con:
+• Order (có thuộc tính OrderID), bao gồm các thẻ con:
+o Customer name (tên KH)
+o Address
+o Total Price (trị giá hàng gởi)
+• Cod (thông tin vận chuyển), bao gồm các thẻ con:
+o Shipping address (địa chỉ nơi nhận hàng)
+o Shipping method (phương thức vận chuyển – air/ground)
+o Shipping total (phí vận chuyển)
+• Account (có thuộc tính State cho biết tài khoản khách hàng có ở trạng thái kích hoạt hay
+ko ? active/in-active), bao gồm các thẻ con:
+o Customer id
+o Invoice period (thời hạn thanh toán hóa đơn vận chuyển)
+o Shipping Info (thông tin giao hàng), bao gồm các thẻ con:
+▪ Ship date (ngày giao hàng)
+▪ Billing address (địa chỉ thanh toán hóa đơn vận chuyển)
+
+• Description (Mô tả hàng hóa giao nhận)
+-->
+
+<invoicelist xmlns="http://fpt.hcm.com" xmlns:hn="http://fpt.hn.com" xmlns:dn="http://fpt.dn.com">
+    <!--danh sach nhan vien o chi nhanh sg-->
+    <invoice>
+        <order id="1">
+            <Customername>lam</Customername>
+            <Address>112/21</Address>
+            <TotalPrice>200</TotalPrice>
+        </order>
+        <cod>
+            <shippingaddress>112/21</shippingaddress>
+            <shippingmethod>air</shippingmethod>
+            <shippingtotal>10</shippingtotal>
+        </cod>
+        <Account state="in-active">
+            <customerid>1</customerid>
+            <invoiceperiod>1month</invoiceperiod>
+            <shippinginfo>
+                <shipdate>1/7</shipdate>
+                <billingaddress>112/21</billingaddress>
+                <description>VP Cpu</description>
+            </shippinginfo>
+        </Account>
+
+    </invoice>
+    <!--danh sach nhan vien o chi nhanh hn-->
+    <hn:invoice>
+        <hn:order id="2">
+            <hn:Customername></hn:Customername>
+            <hn:Address></hn:Address>
+            <hn:TotalPrice></hn:TotalPrice>
+        </hn:order>
+        <hn:cod>
+            <hn:shippingaddress></hn:shippingaddress>
+            <hn:shippingmethod></hn:shippingmethod>
+            <hn:shippingtotal></hn:shippingtotal>
+        </hn:cod>
+        <hn:Account state="active">
+            <hn:customerid></hn:customerid>
+            <hn:invoiceperiod></hn:invoiceperiod>
+            <hn:shippinginfo>
+                <hn:shipdate></hn:shipdate>
+                <hn:billingaddress></hn:billingaddress>
+                <hn:description>sdsada</hn:description>
+            </hn:shippinginfo>
+        </hn:Account>
+
+    </hn:invoice>
+    <!--danh sach nhan vien o chi nhanh dn-->
+    <dn:invoice>
+        <dn:order id="3">
+            <dn:Customername></dn:Customername>
+            <dn:Address></dn:Address>
+            <dn:TotalPrice></dn:TotalPrice>
+        </dn:order>
+        <dn:cod>
+            <dn:shippingaddress></dn:shippingaddress>
+            <dn:shippingmethod></dn:shippingmethod>
+            <dn:shippingtotal></dn:shippingtotal>
+        </dn:cod>
+        <dn:Account state="active">
+            <dn:customerid></dn:customerid>
+            <dn:invoiceperiod></dn:invoiceperiod>
+            <dn:shippinginfo>
+                <dn:shipdate></dn:shipdate>
+                <dn:billingaddress></dn:billingaddress>
+                <dn:description>sdsada</dn:description>
+            </dn:shippinginfo>
+        </dn:Account>
+        
+    </dn:invoice>
+</invoicelist>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Libary
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='d02_Book2.xsd'>
+    <Book>
+        <ID>B01</ID>
+        <title>Lap trinh C</title>
+        <author>Ms Team</author>
+        <price>120</price>
+        <date>2000-01-19</date>
+        <active>true</active>
+    </Book>
+    <Book>
+        <ID>B02</ID>
+        <title>Thiet Ke Web</title>
+        <author>Aptech</author>
+        <price>200</price>
+        <date>1990-09-06</date>
+        <active>false</active>
+    </Book>
+    <Book>
+        <ID>B03</ID>
+        <title>Quan tri du an</title>
+        <author>Ms Team</author>
+        <price>300</price>
+        <date>2019-03-31</date>
+        <active>true</active>
+    </Book>
+</Libary>

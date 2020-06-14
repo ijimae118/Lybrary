@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ho so nhan vien, bao gom cac nhan vien (thuoc cac chi nhanh hn, sg, dn).
+moi nhan vien se co : id, ten, chuc vu, luong.
+chi nhan se duoc bieu dien duoi hinh thuc namespace - voi default namespace la sg
+-->
+
+<hosoNhanvien xmlns="http://fpt.hcm.com" xmlns:hn="http://fpt.hn.com" xmlns:dn="http://fpt.dn.com"><!--nguon goc(noi dung duoc trich tu dau),ko can chinh xac phai la web thuc:): vd cung dc-->
+    <!--danh sach nhan vien o chi nhanh sg-->
+    <nhanvien id="nv1">
+        <ten>Vo Duc Chinh</ten>
+        <chucvu>Giam Doc</chucvu>
+        <luong>1</luong>
+    </nhanvien>
+    <nhanvien id="nv2">
+        <ten>Le Minh</ten>
+        <chucvu>Ke Toan</chucvu>
+        <luong>1000</luong>
+    </nhanvien>
+    <!--danh sach nhan vien o chi nhanh hn-->
+    <hn:nhanvien id="nv3">
+        <hn:ten>Nguyen Toan Thang</hn:ten>
+        <hn:chucvu>Ky Su</hn:chucvu>
+        <hn:luong>400</hn:luong>
+    </hn:nhanvien>
+
+    <!--danh sach nhan vien o chi nhanh dn-->
+    <dn:nhanvien id="nv4">
+        <dn:ten>Do Thanh Phong</dn:ten>
+        <dn:chucvu>Nhan vien Sales</dn:chucvu>
+        <dn:luong>350</dn:luong>
+    </dn:nhanvien>
+
+</hosoNhanvien>
+
+

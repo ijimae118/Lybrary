@@ -1,0 +1,4 @@
+P2, pepsi, 10
+P3, Cake, 20
+P1, coca cola, 12
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Library
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='d02_Book3.xsd'>
+    <Book>
+        <ID>B0012</ID>
+        <title>lap trinh C</title>
+        <author>Aptech</author>
+        <price>100</price>
+        <date edition="1">2000-09-19</date>
+        <active>true</active>
+    </Book>
+    <Book>
+        <ID>M0002</ID>
+        <title>Thiet ke Web</title>
+        <author>MS Team</author>
+        <price>200</price>
+        <date edition="3">2010-09-21</date>
+        <active>false</active>
+    </Book>
+</Library>

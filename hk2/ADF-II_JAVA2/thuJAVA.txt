@@ -1,0 +1,7 @@
+Test lop Runtime
+Mo chuong trinh notepad
+
+proposition: khi Object bi null thi cac phan tu trong lop con dc tao ra bi xoa theo
+aggregation: khi Object bi null thi cac phan tu trong lop con van dc giu lai do tham chieu ben ngoai
+ 
+ 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<Book
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='d02_Book.xsd'><!--sữa thành d02_Book.xsd thi ko đc vì cấu truc ko giong nen validate ko dc-->
+    <ID>B01</ID>
+    <title>Lap Trinh Web Co Ban</title>
+    <author>Aptech</author>
+    <author>Microsoft</author>
+    <author>FPT Aptech</author>
+    <price>12000</price>
+    <date>2018-10-24</date>
+    <active>true</active>
+</Book>
+
+

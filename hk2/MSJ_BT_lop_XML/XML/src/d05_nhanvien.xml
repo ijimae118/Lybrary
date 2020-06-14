@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Mo ta du lieu ho so nhan vien
+bao gom cac bo phan (ten, truong phong).
+trong bo phan, co cac nhan vien (ma so [thuoc tinh], ten, gioi tinh, luong)
+-->
+<Congty>
+    <TenCongty>ABC Limited.</TenCongty>
+    <DiaChi>590 Cach Mang Thang 8</DiaChi>
+    <Bophan>
+        <TenBP>Hanh Chanh - Quan Tri</TenBP>
+        <TruongPhong>Nguyen Toan Thang</TruongPhong>
+        <NhanVien id="NV1">
+            <TenNV>Quach Gia Lam</TenNV>
+            <GioiTinh>Nam</GioiTinh>
+            <Luong>1000</Luong>
+        </NhanVien>
+        <NhanVien id="NV2">
+            <TenNV>Hoang Giang Chuan</TenNV>
+            <GioiTinh>Nam</GioiTinh>
+            <Luong>1200</Luong>
+        </NhanVien>
+        <NhanVien id="NV3">
+            <TenNV>Nguyen Van Long</TenNV>
+            <GioiTinh>Nam</GioiTinh>
+            <Luong>800</Luong>
+        </NhanVien>
+        <NhanVien id="NV4">
+            <TenNV>Dang Tieu Chi</TenNV>
+            <GioiTinh>Nu</GioiTinh>
+            <Luong>1500</Luong>
+        </NhanVien>
+    </Bophan>
+    
+    <Bophan>
+        <TenBP>Ke Hoach</TenBP>
+        <TruongPhong>Nguyen Ngoc Thach</TruongPhong>
+        <NhanVien id="NV5">
+            <TenNV>Dao Xuan Huy</TenNV>
+            <GioiTinh>Nam</GioiTinh>
+            <Luong>1400</Luong>
+        </NhanVien>
+        <NhanVien id="NV6">
+            <TenNV>Nguyen thi Thuong</TenNV>
+            <GioiTinh>Nu</GioiTinh>
+            <Luong>2000</Luong>
+        </NhanVien>
+        <NhanVien id="NV7">
+            <TenNV>Le Minh</TenNV>
+            <GioiTinh>Nam</GioiTinh>
+            <Luong>1300</Luong>
+        </NhanVien>
+    </Bophan>
+</Congty>

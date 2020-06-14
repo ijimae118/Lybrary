@@ -1,0 +1,2 @@
+[BookID],B0001,{Title},Thoy,(price),1000,<Publisher>,Oxford University Press
+[BookID],B0002,{Title},FLOWER,(price),1000,<Publisher>,Cambridge Unicersity Press

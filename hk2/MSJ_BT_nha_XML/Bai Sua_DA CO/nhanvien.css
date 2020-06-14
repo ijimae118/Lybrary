@@ -1,0 +1,11 @@
+div{
+    width: 70%;
+    margin: auto;
+    margin-top: 2em;
+    padding: 0.5em;
+    background-color: aliceblue;
+}
+
+th{
+    color: green;
+}

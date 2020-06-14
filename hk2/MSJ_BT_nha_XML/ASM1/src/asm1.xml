@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Assignment 1: Introduction to XML
+- Tạo file XML lưu trữ 1 thư viện sách (BookCatalog) gồm 10 cuốn sách (Book).
+- Mỗi quyển sách (Book) bao gồm các thông tin : title (tựa sách), author (tác giả), pages
+(số trang), price (đơn gía) , accompany (vật phẩm đi kèm: CD, VCD hoặc Both)
+- Sau khi tạo xong file XML, hãy kiểm tra tính chuẩn tắc (well-formed) của dữ liệu.(y la run dc tren website)
+-->
+
+
+<BoookCatalog>
+    <Book>
+        <title>1</title>
+        <author>1</author>
+        <pages>1</pages>
+        <price>1</price>
+        <accompany>cd</accompany>
+    </Book>
+    <Book>
+        <title>2</title>
+        <author>2</author>
+        <pages>2</pages>
+        <price>2</price>
+        <accompany>vcd</accompany>
+    </Book>
+    <Book>
+        <title>3</title>
+        <author>3</author>
+        <pages>3</pages>
+        <price>3</price>
+        <accompany>both</accompany>
+    </Book>
+    <Book>
+        <title>4</title>
+        <author>4</author>
+        <pages>4</pages>
+        <price>4</price>
+        <accompany>vcd</accompany>
+    </Book>
+    <Book>
+        <title>5</title>
+        <author>5</author>
+        <pages>5</pages>
+        <price>5</price>
+        <accompany>cd</accompany>
+    </Book>
+    <Book>
+        <title>6</title>
+        <author>6</author>
+        <pages>6</pages>
+        <price>6</price>
+        <accompany>vcd</accompany>
+    </Book>
+    <Book>
+        <title>7</title>
+        <author>7</author>
+        <pages>7</pages>
+        <price>7</price>
+        <accompany>cd</accompany>
+    </Book>
+    <Book>
+        <title>8</title>
+        <author>8</author>
+        <pages>8</pages>
+        <price>8</price>
+        <accompany>both</accompany>
+    </Book>
+    <Book>
+        <title>9</title>
+        <author>9</author>
+        <pages>9</pages>
+        <price>9</price>
+        <accompany>cd</accompany>
+    </Book>
+    <Book>
+        <title>10</title>
+        <author>10</author>
+        <pages>10</pages>
+        <price>10</price>
+        <accompany>vcd</accompany>
+    </Book>
+</BoookCatalog>

@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?> <!--bắc buộc phải có-->
+<students>
+  <sinhvien active="true">
+    <id>Student01</id>
+    <name>Gia Lam</name>
+    <email>lam@gmail.com</email>
+    <gender>Nam</gender>
+  </sinhvien>
+  <student active='false'>
+    <id>Student02</id>
+    <name>Xuan Huy</name>
+    <email>huy@yahoo.com</email>
+    <gender>Nam</gender>
+  </student>
+  <student>
+    <id>Student03</id>
+    <name>Toan Thang</name>
+    <email>thang@hotmail.com</email>
+    <gender>Nam</gender>
+  </student>
+  <student>
+    <id>Student04</id>
+    <name>Ngoc Thach</name>
+    <email>thach@yahoo.com </email>
+    <gender>Nam</gender>
+  </student>
+</students>

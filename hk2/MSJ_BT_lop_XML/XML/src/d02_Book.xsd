@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+Mo ta cau truc 1 quyen sach.
+1 quyen sach bao gom :ma so, tua ,tac gia,don gia,ngay xb,ton kho
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+   
+    <xs:element name="Book" >
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded"><!--thi them vao day no chi lam tang so phan tu ben duoi vo han,ko tu lam tang book ,phai tu bam phan tu book -->
+                <xs:element name="ID" type="xs:string" />
+                <xs:element name="title" type="xs:string" />
+                <xs:element name="author" type="xs:string" minOccurs="1" maxOccurs="3" />
+                <xs:element name="price" type="xs:positiveInteger" /><!--nhi phan :Binary,so thi :numeric-->
+                <xs:element name="date" type="xs:date" />
+                <xs:element name="active" type="xs:boolean" /><!-- boolean chi dc nhap true or false-->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

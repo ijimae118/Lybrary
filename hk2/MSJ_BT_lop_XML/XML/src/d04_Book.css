@@ -1,0 +1,62 @@
+/*
+Tap the style rule, quy dinh phan trinh bay node du lieu trong d04_Book.xml
+*/
+*{
+    font-family: arial;
+    font-size: 1.1em;
+    color: graytext;
+    font-weight: bold
+}
+ID{
+    color: red;
+}
+author{
+    font-style: italic;
+}
+Library{
+    display:table;
+    border: solid thin red;
+    with:80px;
+    margin:auto;
+    margin-top: 2em;
+    background-color: whitesmoke;
+}
+Book{
+    display: table-row;
+    background-color: aqua
+}
+ID,title,author,price,date,active{
+   display: table-cell;
+   padding: .5rem 1rem;
+}
+price{
+    text-align: right;
+}
+title,price,active{
+    background-color: aquamarine;
+}
+Lib-name{
+    text-align: center;
+    background-color: aqua;
+   
+    font-size: 25px;
+    font-weight: bolder;
+}
+/* rem vs em
+rem = root em
+case0
+body (10px)
+    div [ke thua body:10px]
+        p [ke thua div:10px]
+            span [ke thua p:10px]
+case1
+body (10px)
+    div (20px)
+        p (15px)
+            span (12px)
+case2
+body (10px)
+    div (1.2em = 1.2 * 10 =12px)
+        p [ke thua div: 1.2em => 12px * 1.2 = 14px]
+            span [ke thua p: 1.2em => 14px * 1.2 > 14px]
+*/

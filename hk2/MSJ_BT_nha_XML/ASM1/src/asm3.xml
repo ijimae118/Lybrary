@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE root SYSTEM 'asm3.dtd'>
+<courierList>
+    <courier>
+        <despatch-details>
+            <Brfrom from-branch="Phun Nhuan" from-region="North">KIEU KIEU</Brfrom>
+            <Brto to-branch="Q1" to-region="East">G.LAM</Brto>
+        </despatch-details>
+        <courier-details>
+            <from address-number="2" street="Phan Xich Long">
+                <building></building>
+            </from>
+            <to address-number="1" street="AUSTRALYA"></to>
+        </courier-details>
+    </courier>
+</courierList>

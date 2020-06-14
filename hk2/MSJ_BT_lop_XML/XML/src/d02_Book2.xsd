@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+Mo ta cau truc thu quyen sach.
+1 quyen sach bao gom :ma so, tua ,tac gia,don gia,ngay xb,ton kho
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="Libary">
+        <xs:complexType>
+            <xs:sequence>
+                 <xs:element name="Book" type="BookType"
+                             maxOccurs="unbounded" /><!--la ko gioi han-->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>   
+   
+
+
+
+        <xs:complexType name="BookType">
+            <xs:sequence>
+                <xs:element name="ID" type="xs:string" />
+                <xs:element name="title" type="xs:string" />
+                <xs:element name="author" type="xs:string" minOccurs='1' maxOccurs='3' />
+                <xs:element name="price" type="xs:positiveInteger" /><!--nhi phan :Binary,so thi :numeric-->
+                <xs:element name="date" type="xs:date" />
+                <xs:element name="active" type="xs:boolean" /><!-- boolean chi dc nhap true or false-->
+            </xs:sequence>
+        </xs:complexType>
+</xs:schema>

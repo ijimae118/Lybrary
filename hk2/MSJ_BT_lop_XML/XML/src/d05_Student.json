@@ -1,0 +1,24 @@
+<!--2 cai thi phai co [] -->
+[
+    {
+        "name":"Dao Cong Duong",
+        "gender":true,
+        "age":27,
+        "languages":["english","France"]
+    },
+    {
+        "name":"Hoang Giang Chuan",
+        "gender":true,
+        "age":21,
+        "languages":["english","Jananese"]
+    }
+]
+
+<!--1 cai thi ko can []-->
+{
+    "name":"Dao Cong Duong",
+    "gender":true,
+    "age":27,
+    "languages":["english","france"]
+}
+<!--trang nay run sai vi co toi 2 mang -->

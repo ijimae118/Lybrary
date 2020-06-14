@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="d04_book.css" ?>
+<Library>
+    <Lib-name> ABC Library </Lib-name>
+    <Book>
+        <ID>B0012</ID>
+        <title>lap trinh C</title>
+        <author>Aptech</author>
+        <price>100</price>
+        <date edition="1">2000-09-19</date>
+        <active>true</active>
+    </Book>
+    <Book>
+        <ID>M0002</ID>
+        <title>Thiet ke Web</title>
+        <author>MS Team</author>
+        <price>200</price>
+        <date edition="3">2010-09-21</date>
+        <active>false</active>
+    </Book>
+        <Book>
+        <ID>M0022</ID>
+        <title>JavaCB</title>
+        <author>MS Team</author>
+        <price>200</price>
+        <date edition="3">2010-09-21</date>
+        <active>false</active>
+    </Book>
+        <Book>
+        <ID>M0012</ID>
+        <title>AJAX</title>
+        <author>MS Team</author>
+        <price>200</price>
+        <date edition="3">2010-09-21</date>
+        <active>false</active>
+    </Book>
+        <Book>
+        <ID>M0032</ID>
+        <title>Javacrit</title>
+        <author>MS Team</author>
+        <price>1000</price>
+        <date edition="3">2010-09-21</date>
+        <active>false</active>
+    </Book>
+</Library>

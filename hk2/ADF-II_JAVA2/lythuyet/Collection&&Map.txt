@@ -1,0 +1,32 @@
+﻿
+collection(list,set,queue)
+add,remove,set: sua,get,contain: tim kiem
+map (key,values)
+put,remove,put: sua,get
+boolean containkey(key)==true or false: dung de tim kiem key.
+
+Object put(Object key, Object value)	Nó được sử dụng để chèn một mục nhập trong map hiện tại.
+void putAll(Map map)			Nó được sử dụng để chèn map chỉ định vào map hiện tại.
+Object remove(Object key)		Nó được sử dụng để xóa một mục nhập của key được chỉ định.
+Object get(Object key)			Nó được sử dụng để trả lại giá trị cho khoá được chỉ định.
+boolean containsKey(Object key)		Nó được sử dụng để tìm kiếm key được chỉ định từ map hiện tại.
+Set keySet()				Nó được sử dụng để trả đối tượng Set có chứa tất cả các keys.
+Set entrySet()				Nó được sử dụng để trả lại đối tượng Set có chứa tất cả các keys và values.
+
+Object getKey():Nó được dùng để lấy key;
+Object getValue():Nó được sử dụng để lấy value;
+
+collection                        key    values
+S1,huy		<=(S1,huy)=>	  S1  => S1,huy
+
+List co sap xep theo index ; List có thể chứa các phần tử trùng lặp (dublicate), trong khi Set chỉ chứa các phần tử duy nhất.
+Set  ko co sap xep;(Ko cho phep gia tri trung lap) va ko quan ly thu tu sap xep.
+hashset ko duy tri thu tu ;treeset =>sort duy tri thu tu tang dan (moi lan nhap vao no sort 1 lan nen kha cham)
+if thay co link thi thuong truy xuat dc = index.
+stack :ngan xep (vao truoc lam trc); Deque :hang doi (vao sau lam trc);
+
+
+
+
+
+

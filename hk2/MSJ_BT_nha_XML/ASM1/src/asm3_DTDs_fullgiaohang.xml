@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE delivered-products[
+
+<!ELEMENT delivered-products (delivered-product)*>
+<!ELEMENT delivered-product (invoice,customer,product)>
+
+<!ELEMENT invoice EMPTY>
+<!ATTLIST invoice id CDATA #REQUIRED
+                  date CDATA #REQUIRED
+                  by CDATA #REQUIRED>
+<!ELEMENT customer (name,address)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT product (product-name,quality,price)>
+<!ATTLIST product id CDATA #REQUIRED>
+<!ELEMENT product-name (#PCDATA)>
+<!ELEMENT quality (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+
+    <!ENTITY moto "by moto">
+    <!ENTITY truck "by truck">
+]>
+
+<delivered-products>
+    <delivered-product>
+        <invoice  by="&truck;" date="2018/03/11" id="IV123" ></invoice>
+        <customer>
+            <name>Tuan Anh</name>
+            <address>123 Le Thanh Ton Q1</address>
+        </customer>
+        <product id="P00001">
+            <product-name>TV Sony Wega 46 inches</product-name>
+            <quality>2</quality>
+            <price>$450</price>
+        </product>
+    </delivered-product>
+
+</delivered-products>

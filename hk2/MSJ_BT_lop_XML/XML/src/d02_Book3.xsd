@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!--
+Mo ta cau truc cua file XML.
+Day la 1 thu vien sach.(them cac yeu to vao type)
+1 quyen sach bao gom: maso, tua, tac gia, don gia, ngay xb, ton kho
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+    
+    <xs:element name="Library">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Book" type="BookType" 
+                            maxOccurs="unbounded"  /><!--unbounded la ko gioi han-->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+
+    
+    <xs:complexType name="BookType" >
+        <xs:sequence>
+            <xs:element name="ID" type="kieuID" />
+            <xs:element name="title" type="kieuTitle" />
+            <xs:element name="author" type="kieuTacgia" 
+                        minOccurs='1' maxOccurs='3' />
+            <xs:element name="price" type="kieuDonGia" />
+            <xs:element name="date" type="kieuNgayXB" />
+            <xs:element name="active" type="xs:boolean" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- ma so sach bat dau bang B hoac M, tiep theo la 4 ky so -->
+    <xs:simpleType name="kieuID">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[BM]\d{4}" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- tua sach, it nhat la 3 ky tu, nhieu nhat 30 ky tu -->
+    <xs:simpleType name="kieuTitle">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3" />
+            <xs:maxLength value="30" />    
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- tac gia , chi la 1 trong so [MS Team, Aptech, FPT] -->
+    <xs:simpleType name="kieuTacgia">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="MS Team" />
+            <xs:enumeration value="Aptech" />
+            <xs:enumeration value="FPT" />
+        </xs:restriction>
+    </xs:simpleType>   
+    
+    
+    <!-- don gia <=1000 -->
+    <xs:simpleType name="kieuDonGia">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:maxInclusive value="1000" />
+        </xs:restriction>
+    </xs:simpleType>                              
+        
+    <!--ngay xuat ban, co thuoc tinh lan xuat ban -->    
+    <xs:complexType name="kieuNgayXB">
+        <xs:simpleContent>
+            <xs:extension base="xs:date" >
+                <xs:attribute name="edition" type="xs:integer" use="required" />
+            </xs:extension>
+        </xs:simpleContent> 
+    </xs:complexType>
+    
+    
+</xs:schema>

@@ -1,0 +1,80 @@
+<?xml version="1.0" standalone="yes"?>
+<ProductList>
+  <Product>
+    <Code>P01</Code>
+    <Name>Banh Mi Trung</Name>
+    <Price>15000</Price>
+    <Qoh>100</Qoh>
+    <Cat>FD</Cat>
+  </Product>
+  <Product>
+    <Code>P02</Code>
+    <Name>Mi xao bo</Name>
+    <Price>25000</Price>
+    <Qoh>200</Qoh>
+    <Cat>FD</Cat>
+  </Product>
+  <Product>
+    <Code>P03</Code>
+    <Name>Xoi ga man</Name>
+    <Price>20000</Price>
+    <Qoh>10</Qoh>
+    <Cat>FD</Cat>
+  </Product>
+  <Product>
+    <Code>P04</Code>
+    <Name>Bun bo hue</Name>
+    <Price>35000</Price>
+    <Qoh>25</Qoh>
+    <Cat>FD</Cat>
+  </Product>
+  <Product>
+    <Code>P05</Code>
+    <Name>Coca cola</Name>
+    <Price>10000</Price>
+    <Qoh>90</Qoh>
+    <Cat>BE</Cat>
+  </Product>
+  <Product>
+    <Code>P06</Code>
+    <Name>Sua chua</Name>
+    <Price>9000</Price>
+    <Qoh>10</Qoh>
+    <Cat>BE</Cat>
+  </Product>
+  <Product>
+    <Code>P07</Code>
+    <Name>Tra sua</Name>
+    <Price>20000</Price>
+    <Qoh>12</Qoh>
+    <Cat>BE</Cat>
+  </Product>
+  <Product>
+    <Code>P08</Code>
+    <Name>Cafe</Name>
+    <Price>12000</Price>
+    <Qoh>15</Qoh>
+    <Cat>BE</Cat>
+  </Product>
+  <Product>
+    <Code>P09</Code>
+    <Name>Xoi khuc</Name>
+    <Price>14000</Price>
+    <Qoh>10</Qoh>
+    <Cat>FD</Cat>
+  </Product>
+  <Product>
+    <Code>P10</Code>
+    <Name>Ha Cao</Name>
+    <Price>15000</Price>
+    <Qoh>20</Qoh>
+    <Cat>FD</Cat>
+  </Product>
+  <Product>
+    <Code>P11</Code>
+    <Name>Pho bo</Name>
+    <Price>50000</Price>
+    <Qoh>5</Qoh>
+    <Cat>FD</Cat>
+  </Product>
+</ProductList>

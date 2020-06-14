@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Mo ta cau truc ho so nhan vien,bao gom nhieu nhan vien.
+Moi nhan vien, se co thuoc tinh [maso (duy nhat),gioi tinh(nam/nu)],
+                     ho ten , chuc vu,luong,bo phan
+-->
+
+
+<!ELEMENT HoSoNhanVien (NhanVien+)>
+<!ELEMENT NhanVien (Ten ,ChucVu,Luong,BoPhan)>
+<!ELEMENT Ten (#PCDATA)>
+<!ELEMENT ChucVu (#PCDATA)>
+<!ELEMENT Luong (#PCDATA)>
+<!ELEMENT BoPhan (#PCDATA)>
+
+<!ATTLIST NhanVien MaSo ID #REQUIRED
+         GioiTinh (Nam|Nu) #REQUIRED >
+

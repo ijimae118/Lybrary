@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Tao ho so sinh vien theo cau truc DTD ban dau.
+Ho so sinh vien bao gom cac sinh vien. Moi sinh vien se co thuoc tinh id(MaSo), ten, gioi tinh, diem kq.
+-->
+<!--Phan khai bao cau truc ta lieu xml theo DTD(cac Ten element phai co khoang trang voi hai ben ,co phan biet chu hoa va chu thuong)-->
+<!DOCTYPE HoSoSinhVien[
+    <!ELEMENT HoSoSinhVien (SinhVien+)>
+    <!ELEMENT SinhVien (Ten, GioiTinh, DiemKQ)>
+    <!ELEMENT Ten (#PCDATA)>
+    <!ELEMENT GioiTinh (#PCDATA)>
+    <!ELEMENT DiemKQ (#PCDATA)>
+    <!ATTLIST SinhVien MaSo CDATA #REQUIRED >
+]>
+<!--Noi dung tai lieu_(MaSo xuat hien kh bam ctrl+space),con dong khac thi bam < no se tu xuat hien-->
+<HoSoSinhVien>
+    <SinhVien MaSo="S1">
+        <Ten>Vo Duc Chinh</Ten>
+        <GioiTinh>Nam</GioiTinh>
+        <DiemKQ>50</DiemKQ>
+    </SinhVien>
+    <SinhVien MaSo="S21">
+        <Ten>Quach Gia Lam</Ten>
+        <GioiTinh>Nam</GioiTinh>
+        <DiemKQ>90</DiemKQ>
+    </SinhVien>
+</HoSoSinhVien>
+<!--if thieu thuoc tinh XML thi -->
+<!--check XML  dc qua trinh duyet-->
+<!--validate XML ko dc if ko dung cau truc khai bao-->
